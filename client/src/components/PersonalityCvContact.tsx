@@ -231,6 +231,9 @@ export function ContactSection() {
           <a href={SOCIALS.whatsapp} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
             WhatsApp
           </a>
+          <a href={SOCIALS.behance} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
+            Behance
+          </a>
         </div>
       </div>
     </section>
@@ -251,6 +254,7 @@ export function Footer() {
           <a href={SOCIALS.linkedin} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">LinkedIn</a>
           <a href={SOCIALS.github} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">GitHub</a>
           <a href={SOCIALS.emailHref} className="text-sm text-muted-foreground hover:text-[var(--ember)]">Email</a>
+          <a href={SOCIALS.behance} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">Behance</a>
           <a href="#cv" onClick={(e) => { e.preventDefault(); document.getElementById("cv")?.scrollIntoView({ behavior: "smooth" }); }} className="text-sm text-muted-foreground hover:text-[var(--ember)]">CV</a>
         </nav>
         <p className="font-mono text-xs text-muted-foreground">

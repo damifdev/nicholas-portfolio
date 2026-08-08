@@ -143,6 +143,15 @@ export default function Hero() {
                 aria-label="Email">
                 Email
               </a>
+              <a
+                href={SOCIALS.behance}
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="magnet"
+                className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]"
+                aria-label="Behance">
+                Behance
+              </a>
             </div>
           </div>
 

@@ -7,7 +7,7 @@
 
 export const ASSETS = {
   monogram: "/manus-storage/osa-monogram_85fa557c.png",
-  portrait: "/manus-storage/hero-portrait_256386d0.png",
+  portrait: "/manus-storage/portrait-real_5e319342.png",
   heroTexture: "/manus-storage/hero-texture_864edf0f.png",
   divider: "/manus-storage/section-divider_12b73b02.png",
   beyondScreen: "/manus-storage/beyond-screen_d69848a5.png",
@@ -24,12 +24,12 @@ export const NAV_LINKS = [
 ];
 
 export const SOCIALS = {
-  email: "hello@nicholassamsonajai.dev",
-  emailHref: "mailto:hello@nicholassamsonajai.dev",
-  linkedin: "https://www.linkedin.com/in/nicholassamsonajai",
-  github: "https://github.com/nicholassamsonajai",
-  whatsapp: "https://wa.me/2340000000000", // TODO: replace with Nicholas's number
-  // Add other profiles here as they become available
+  email: "damilola.samsonajai@gmail.com",
+  emailHref: "mailto:damilola.samsonajai@gmail.com",
+  linkedin: "https://www.linkedin.com/in/oluwadamilola-samson-ajai-2a2677360",
+  github: "https://github.com/damifdev",
+  behance: "https://www.behance.net/damilolasamson-ajai",
+  whatsapp: "https://wa.me/2349122932268",
 };
 
 /* ------------------------------------------------------------------ */
