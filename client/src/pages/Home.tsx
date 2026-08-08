@@ -1,25 +1,46 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+/*
+ * INK & EMBER — Home: composed from modular section components.
+ * Dark editorial digital-studio portfolio for Nicholas Samson-Ajai.
  */
+import Navbar from "@/components/Navbar";
+import CustomCursor from "@/components/CustomCursor";
+import Hero from "@/components/Hero";
+import SelectedWork from "@/components/SelectedWork";
+import { AboutSection, SkillsSection, ProcessSection } from "@/components/AboutSkills";
+import {
+  JourneySection,
+  BecomingSection,
+  ExperienceSection,
+} from "@/components/JourneyLearning";
+import {
+  BeyondScreenSection,
+  CvSection,
+  ContactSection,
+  Footer,
+} from "@/components/PersonalityCvContact";
+import { useReveal } from "@/hooks/useReveal";
+
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  useReveal();
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-background text-foreground">
+      <CustomCursor />
+      <Navbar />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <Hero />
+        <SelectedWork />
+        <AboutSection />
+        <SkillsSection />
+        <ProcessSection />
+        <ExperienceSection />
+        <JourneySection />
+        <BecomingSection />
+        <BeyondScreenSection />
+        <CvSection />
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }

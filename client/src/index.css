@@ -1,3 +1,9 @@
+/*
+ * INK & EMBER — Dark editorial / digital studio aesthetic
+ * Near-black warm charcoal bg, off-white paper fg, ember orange accent.
+ * Fonts: Fraunces (display serif), Space Grotesk (body/UI sans), IBM Plex Mono (meta).
+ * Typography IS the interface. One accent, used surgically. Ruled hairlines.
+ */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -40,85 +46,80 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-display: "Fraunces", serif;
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --color-ember: var(--ember);
 }
 
-:root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
-}
-
+:root,
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
+  --radius: 0rem;
+
+  /* Ink & Ember palette */
+  --background: oklch(0.145 0.008 60);      /* warm near-black #141311 */
+  --foreground: oklch(0.925 0.012 85);      /* off-white paper #EDEAE4 */
+  --card: oklch(0.175 0.008 60);
+  --card-foreground: oklch(0.925 0.012 85);
+  --popover: oklch(0.175 0.008 60);
+  --popover-foreground: oklch(0.925 0.012 85);
+  --primary: oklch(0.66 0.19 40);           /* ember orange #FF5C1F */
+  --primary-foreground: oklch(0.985 0.01 85);
+  --secondary: oklch(0.21 0.008 60);
+  --secondary-foreground: oklch(0.82 0.01 85);
+  --muted: oklch(0.22 0.008 60);
+  --muted-foreground: oklch(0.62 0.012 80);
+  --accent: oklch(0.66 0.19 40);
+  --accent-foreground: oklch(0.985 0.01 85);
+  --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --border: oklch(0.925 0.012 85 / 12%);
+  --input: oklch(0.925 0.012 85 / 18%);
+  --ring: oklch(0.66 0.19 40);
+  --ember: oklch(0.66 0.19 40);
+
+  --chart-1: oklch(0.66 0.19 40);
+  --chart-2: oklch(0.75 0.12 60);
+  --chart-3: oklch(0.55 0.02 60);
+  --chart-4: oklch(0.4 0.02 60);
+  --chart-5: oklch(0.3 0.015 60);
+
+  --sidebar: oklch(0.175 0.008 60);
+  --sidebar-foreground: oklch(0.925 0.012 85);
+  --sidebar-primary: oklch(0.66 0.19 40);
+  --sidebar-primary-foreground: oklch(0.985 0.01 85);
+  --sidebar-accent: oklch(0.22 0.008 60);
+  --sidebar-accent-foreground: oklch(0.925 0.012 85);
+  --sidebar-border: oklch(0.925 0.012 85 / 12%);
+  --sidebar-ring: oklch(0.66 0.19 40);
+
+  --ease-out-expo: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-expo: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    cursor: none;
+  }
+  @media (max-width: 768px) {
+    body {
+      cursor: auto;
+    }
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+  ::selection {
+    background: oklch(0.66 0.19 40 / 35%);
+    color: var(--foreground);
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -126,52 +127,128 @@
   [type="submit"]:not(:disabled),
   [type="reset"]:not(:disabled),
   a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
+  select:not(:disabled) {
     @apply cursor-pointer;
   }
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
-    padding-right: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
-
   .flex {
     min-height: 0;
     min-width: 0;
   }
-
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      max-width: 1360px;
     }
   }
 
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
-    }
+  /* Editorial micro-label */
+  .micro-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+
+  /* Hairline rule */
+  .hairline {
+    height: 1px;
+    background: oklch(0.925 0.012 85 / 14%);
+  }
+
+  /* Noise overlay */
+  .noise-overlay {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    opacity: 0.045;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Marquee */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 36s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Scroll reveal (JS-driven via IntersectionObserver adds .revealed) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+      opacity 0.7s var(--ease-out-expo),
+      transform 0.7s var(--ease-out-expo);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-clip {
+    clip-path: inset(0 0 100% 0);
+    transition:
+      clip-path 0.9s var(--ease-in-out-expo),
+      opacity 0.01ms linear 0ms;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal-clip.revealed {
+    clip-path: inset(0 0 0% 0);
+  }
+  .js-ready .reveal-clip:not(.revealed) {
+    /* keep hidden until JS adds .revealed — avoids FOUC of clipped text */
+  }
+
+  /* Magnetic button press */
+  .magnetic-btn:active {
+    transform: scale(0.97);
+    transition: transform 0.16s var(--ease-out-expo);
+  }
+
+  /* Rotated edge label */
+  .edge-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .reveal,
+  .reveal-clip {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
