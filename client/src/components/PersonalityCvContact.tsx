@@ -7,7 +7,9 @@ import { useEffect, useRef } from "react";
 import { ArrowUpRight, Download, FileText } from "lucide-react";
 import { toast } from "sonner";
 import { SectionHeading } from "./SelectedWork";
-import { ASSETS, PERSONAL_THEMES, SOCIALS, EXPERIENCE } from "@/lib/data";
+import { ASSETS, PERSONAL_THEMES, SOCIALS } from "@/lib/data";
+
+const CV_PDF = "/manus-storage/nicholas-cv_090563b6.pdf";
 
 export function BeyondScreenSection() {
   return (
@@ -66,9 +68,12 @@ export function CvSection() {
   };
 
   const downloadCv = () => {
-    toast("CV file coming soon", {
-      description:
-        "Nicholas's real CV will be attached here — the structure is ready to swap in.",
+    const link = document.createElement("a");
+    link.href = CV_PDF;
+    link.download = "OLUWADAMILOLA-SAMSON-AJAI-CV.pdf";
+    link.click();
+    toast("CV download started", {
+      description: "The PDF will save to your device's downloads folder.",
     });
   };
 
@@ -138,49 +143,24 @@ export function CvSection() {
             ✕
           </button>
         </div>
-        <div className="mt-8 space-y-8 text-sm leading-relaxed">
-          <section>
-            <h4 className="micro-label mb-3 text-[var(--ember)]">Experience</h4>
-            <ul className="space-y-2 text-foreground/85">
-              {EXPERIENCE.map((e) => (
-                <li key={e.role}>
-                  <strong>{e.role}</strong> — {e.company}. {e.framing}
-                </li>
-              ))}
-            </ul>
-          </section>
-          <section>
-            <h4 className="micro-label mb-3 text-[var(--ember)]">Education</h4>
-            <p className="text-foreground/85">B.Sc. Computer Science</p>
-          </section>
-          <section>
-            <h4 className="micro-label mb-3 text-[var(--ember)]">Skills</h4>
-            <p className="text-foreground/85">
-              UI/UX Design · User Flows · Wireframing · Prototyping · Design Systems ·
-              Responsive Design · HTML · CSS · JavaScript · WordPress · Elementor · Git · GitHub ·
-              Figma · Adobe Photoshop · Adobe Illustrator · Python · Linux · Networking
-            </p>
-          </section>
-          <section>
-            <h4 className="micro-label mb-3 text-[var(--ember)]">Certifications</h4>
-            <ul className="space-y-2 text-foreground/85">
-              <li>Google UX Design Professional Certificate — Completed</li>
-              <li>CompTIA Security+ — In progress</li>
-              <li>CCNA — In progress</li>
-              <li>CEH — In progress</li>
-              <li>Python / AI learning — In progress</li>
-            </ul>
-          </section>
-          <section>
-            <h4 className="micro-label mb-3 text-[var(--ember)]">Projects</h4>
-            <ul className="space-y-2 text-foreground/85">
-              {["GI Buy Insurance Website (Sanlam)", "BancAssurance Mobile App (Sanlam)", "Virtual Agent App (Sanlam)", "POS & Digital Operations", "CGSUL Website Redesign", "1999 Ideas WordPress Development"].map(
-                (p) => (
-                  <li key={p}>{p}</li>
-                ),
-              )}
-            </ul>
-          </section>
+        <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
+          Below is the full curriculum vitae — the exact document you can also
+          download. Scroll inside the frame to read it.
+        </p>
+        <div className="mt-6 overflow-hidden border border-border bg-white">
+          <iframe
+            src={`${CV_PDF}#toolbar=0`}
+            title="Full CV — Oluwadamilola Samson-Ajai"
+            className="h-[60vh] w-full"
+          />
+        </div>
+        <div className="mt-6 flex justify-end">
+          <a
+            href={CV_PDF}
+            download="OLUWADAMILOLA-SAMSON-AJAI-CV.pdf"
+            className="magnetic-btn inline-flex items-center gap-2 border border-[var(--ember)] px-5 py-2.5 text-sm font-semibold text-[var(--ember)] transition-colors hover:bg-[var(--ember)] hover:text-primary-foreground">
+            <Download className="h-4 w-4" /> Download PDF
+          </a>
         </div>
       </dialog>
     </section>
