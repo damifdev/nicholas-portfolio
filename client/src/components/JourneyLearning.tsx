@@ -31,10 +31,10 @@ export function JourneySection() {
     <section id="journey" className="border-t border-border py-24 md:py-32">
       <div className="container">
         <SectionHeading
-          index="06"
+          index="10"
           kicker="Journey"
           title="The path so far."
-          subtitle="An interactive timeline of how a Computer Science graduate became a multidisciplinary technologist."
+          subtitle="An interactive timeline of how a Computer Science graduate became a multidisciplinary designer, developer and AI-assisted creative."
         />
 
         <div className="relative mx-auto max-w-3xl">
@@ -69,7 +69,7 @@ export function BecomingSection() {
     <section className="border-t border-border py-24 md:py-32">
       <div className="container">
         <SectionHeading
-          index="07"
+          index="11"
           kicker="Currently Becoming"
           title="Investing in the next chapter."
         />
@@ -115,7 +115,7 @@ export function ExperienceSection() {
     <section className="border-t border-border py-24 md:py-32">
       <div className="container">
         <SectionHeading
-          index="08"
+          index="12"
           kicker="Experience"
           title="Where the craft was built."
         />

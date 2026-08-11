@@ -6,7 +6,14 @@ import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import Hero from "@/components/Hero";
 import SelectedWork from "@/components/SelectedWork";
-import { AboutSection, SkillsSection, ProcessSection } from "@/components/AboutSkills";
+import {
+  AboutSection,
+  SkillsSection,
+  AiCreativeSection,
+  CapabilitySection,
+  ProcessSection,
+} from "@/components/AboutSkills";
+import { AiProjectsSection } from "@/components/AiProjects";
 import {
   JourneySection,
   BecomingSection,
@@ -32,6 +39,9 @@ export default function Home() {
         <SelectedWork />
         <AboutSection />
         <SkillsSection />
+        <AiCreativeSection />
+        <AiProjectsSection />
+        <CapabilitySection />
         <ProcessSection />
         <ExperienceSection />
         <JourneySection />

@@ -12,6 +12,11 @@ export const ASSETS = {
   divider: "/manus-storage/section-divider_12b73b02.png",
   beyondScreen: "/manus-storage/beyond-screen_d69848a5.png",
   learningDirection: "/manus-storage/learning-direction_430ee304.png",
+  aiCreativeBanner: "/manus-storage/ai-creative-banner_5a38019b.png",
+  aiExpLanding: "/manus-storage/ai-exp-landing_672885a2.png",
+  aiExpLogo: "/manus-storage/ai-exp-logo_b18a01b0.png",
+  aiExpFlyer: "/manus-storage/ai-exp-flyer_e1ec4f76.png",
+  aiExpUi: "/manus-storage/ai-exp-ui_cc1c8506.png",
 };
 
 export const NAV_LINKS = [
@@ -30,6 +35,19 @@ export const SOCIALS = {
   github: "https://github.com/damifdev",
   behance: "https://www.behance.net/damilolasamson-ajai",
   whatsapp: "https://wa.me/2349122932268",
+};
+
+/* ------------------------------------------------------------------ */
+/* Positioning                                                         */
+/* ------------------------------------------------------------------ */
+export const POSITIONING = {
+  badge: "UI/UX DESIGN × WEB DEVELOPMENT × AI-ASSISTED CREATIVE",
+  headline: "I design digital experiences, build websites, and use AI to bring ideas to life.",
+  subtext:
+    "I'm Oluwadamilola, a UI/UX Designer and Web Developer creating thoughtful digital experiences, responsive websites, visual identities and creative assets — using a combination of design thinking, technology and AI-assisted workflows.",
+  displayTitle: "Oluwadamilola Samson-Ajai — UI/UX Designer | Web Developer | AI-Assisted Creative",
+  aboutPositioning:
+    "I work at the intersection of design, technology and emerging AI tools. My background spans UI/UX design, web development, technical support and digital product creation. Today, I use AI-assisted workflows alongside traditional design and development practices to explore ideas faster, build websites more efficiently, and create visual assets that help brands communicate better.",
 };
 
 /* ------------------------------------------------------------------ */
@@ -164,41 +182,6 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    slug: "pos-digital-operations",
-    title: "POS & Digital Operations",
-    category: "Operations Experience",
-    year: "Field Experience",
-    role: "Operations & UX Support",
-    description:
-      "Hands-on experience with POS machines and multi-location operations — where technology, operations and user experience meet the real world.",
-    tech: ["POS Systems", "Operations Support", "Troubleshooting", "User Experience"],
-    image: "/manus-storage/card-pos_98786f13.png",
-    gallery: [
-      "/manus-storage/card-pos_98786f13.png",
-    ],
-    highlight: "Technology × Operations × User Experience",
-    caseStudy: {
-      overview:
-        "Field and operations experience working with POS machines and supporting digital operations across different locations, spanning setup, support and day-to-day reliability.",
-      problem:
-        "Payment and operations technology only works if it survives real-world conditions — network drops, unfamiliar users, and the pressure of live transactions.",
-      roleDesc:
-        "Supported POS operations across locations, troubleshooting hardware and software, and observing how real users interact with the devices.",
-      process: [
-        "Supported POS deployment and operation across multiple locations.",
-        "Troubleshot hardware and software issues under live operational pressure.",
-        "Observed how users interact with the devices and fed those insights back into support practice.",
-        "Connected field realities with the digital systems running behind them.",
-      ],
-      design:
-        "Not a designed product in the traditional sense — the 'interface' was the daily interaction between people, machines and processes, shaped by hands-on observation.",
-      outcome:
-        "Grounded, practical fluency in how digital products behave outside the studio — a perspective that now informs every interface I design.",
-      reflection:
-        "Working POS operations taught me that every design eventually meets the real world — and the best interfaces are built with that world in mind.",
-    },
-  },
-  {
     slug: "cgsul-website-redesign",
     title: "CGSUL Website Redesign",
     category: "WordPress / Web Development",
@@ -231,19 +214,19 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    slug: "1999-ideas",
-    title: "1999 Ideas",
+    slug: "wordpress-development",
+    title: "WordPress Development",
     category: "WordPress / Web Development",
     year: "1999 Ideas",
     role: "WordPress Developer",
     description:
-        "Building and maintaining WordPress websites as a professional role — Elementor implementations, responsive front-end development and ongoing site stewardship.",
-    tech: ["WordPress", "Elementor", "UI Implementation", "Frontend Development", "Maintenance"],
+        "Building and maintaining WordPress websites as a professional role — Elementor implementations, responsive front-end development, AI-assisted workflows and ongoing site stewardship.",
+    tech: ["WordPress", "Elementor", "HTML", "CSS", "JavaScript", "AI-Assisted Development"],
     image: "/manus-storage/project-1999ideas_da261368.png",
     highlight: "WordPress development · responsive design · site maintenance",
     caseStudy: {
       overview:
-        "Professional WordPress development work at 1999 Ideas — implementing designs, building responsive websites and maintaining live web properties.",
+        "Professional WordPress development work at 1999 Ideas — implementing designs, building responsive websites, exploring AI-assisted development workflows and maintaining live web properties.",
       problem:
         "Clients need websites that look designed, perform well on every device, and keep working reliably long after launch.",
       roleDesc:
@@ -336,21 +319,23 @@ export interface SkillGroup {
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
-    category: "Product Design",
+    category: "Product & UX Design",
     index: "A",
     skills: [
       "UI Design",
       "UX Design",
+      "User Research",
       "User Flows",
       "Wireframing",
       "Prototyping",
       "Design Systems",
       "Responsive Design",
       "Interaction Design",
+      "Strategic Design Thinking",
     ],
   },
   {
-    category: "Development",
+    category: "Web Development",
     index: "B",
     skills: [
       "HTML",
@@ -358,34 +343,49 @@ export const SKILL_GROUPS: SkillGroup[] = [
       "JavaScript",
       "WordPress",
       "Elementor",
+      "Responsive Web Development",
       "Git",
       "GitHub",
-      "Responsive Web Development",
+    ],
+  },
+  {
+    category: "AI-Assisted Design & Development",
+    index: "C",
+    skills: [
+      "AI-Assisted Website Development",
+      "AI-Assisted UI/UX Design",
+      "AI-Assisted Visual Design",
+      "AI-Assisted Logo Design",
+      "AI-Assisted Flyer Design",
+      "Prompt Engineering",
+      "AI-Assisted Content Creation",
+      "AI Workflow Development",
+      "Rapid Prototyping",
     ],
   },
   {
     category: "Creative Tools",
-    index: "C",
+    index: "D",
     skills: [
       "Figma",
+      "Canva",
       "Adobe Photoshop",
       "Adobe Illustrator",
       "After Effects",
       "Premiere Pro",
-      "Canva",
       "CapCut",
     ],
   },
   {
-    category: "Emerging Technology",
-    index: "D",
+    category: "IT & Technology",
+    index: "E",
     skills: [
-      "Python",
-      "Artificial Intelligence",
-      "AI Automation",
-      "Cybersecurity",
+      "Technical Support",
+      "Hardware & Software Troubleshooting",
       "Linux",
       "Networking",
+      "Cybersecurity",
+      "Python",
     ],
   },
 ];
@@ -422,15 +422,190 @@ export const PROCESS_STEPS = [
 ];
 
 /* ------------------------------------------------------------------ */
+/* AI Workflow — six-step creative workflow with AI-assisted steps     */
+/* ------------------------------------------------------------------ */
+export const AI_WORKFLOW_STEPS = [
+  {
+    index: "01",
+    title: "Discover",
+    text: "Understand the problem — the user, the brand and what the outcome must achieve.",
+  },
+  {
+    index: "02",
+    title: "Explore",
+    text: "Use AI to rapidly explore ideas, directions and possibilities at a speed traditional research can't match.",
+  },
+  {
+    index: "03",
+    title: "Design",
+    text: "Apply UX principles and visual design judgment — AI suggests, I decide.",
+  },
+  {
+    index: "04",
+    title: "Build",
+    text: "Use AI-assisted development alongside traditional coding to move from concept to working product.",
+  },
+  {
+    index: "05",
+    title: "Refine",
+    text: "Review, test, edit and improve — every output is checked against real design standards.",
+  },
+  {
+    index: "06",
+    title: "Ship",
+    text: "Deliver the final website, interface, brand asset or creative product.",
+  },
+];
+
+export const AI_WORKFLOW_QUOTE = "AI accelerates the process. Human judgment defines the result.";
+
+/* ------------------------------------------------------------------ */
+/* AI × Creative Technology — three capability pillars                 */
+/* ------------------------------------------------------------------ */
+export const AI_PILLARS = [
+  {
+    index: "01",
+    title: "AI-Assisted Website Development",
+    items: [
+      "Website ideation",
+      "Page structure & content planning",
+      "UI generation & exploration",
+      "Frontend development assistance",
+      "Code generation & refinement",
+      "Debugging & troubleshooting",
+      "Rapid prototyping",
+      "Website iteration",
+    ],
+  },
+  {
+    index: "02",
+    title: "AI-Assisted Visual Design",
+    items: [
+      "Logo concepts",
+      "Brand identity exploration",
+      "Flyer design",
+      "Promotional graphics",
+      "Social media designs",
+      "Visual concepts",
+      "Image generation & refinement",
+    ],
+  },
+  {
+    index: "03",
+    title: "AI-Assisted UI/UX",
+    items: [
+      "Design exploration",
+      "Layout ideation",
+      "User flow exploration",
+      "Rapid prototyping",
+      "Content structuring",
+      "Interface variations",
+      "Design iteration",
+    ],
+  },
+];
+
+export const AI_WORKFLOW_CHAIN = ["Idea", "Prompt", "Explore", "Design", "Refine", "Build", "Ship"];
+
+export const AI_DISCLAIMER =
+  "AI is a tool inside my creative process — not a replacement for design judgment. Every concept is shaped, curated and refined by human craft before it ships.";
+
+/* ------------------------------------------------------------------ */
+/* What I Can Build — capability cards                                 */
+/* ------------------------------------------------------------------ */
+export const CAPABILITY_CARDS = [
+  {
+    title: "Websites",
+    text: "Responsive websites and digital experiences built to work everywhere.",
+  },
+  {
+    title: "Interfaces",
+    text: "User-centered web and mobile interfaces designed around real workflows.",
+  },
+  {
+    title: "Brand Identity",
+    text: "Logos, visual identities and brand assets that help brands communicate.",
+  },
+  {
+    title: "Marketing Design",
+    text: "Flyers, social graphics and promotional materials with editorial polish.",
+  },
+  {
+    title: "AI-Assisted Products",
+    text: "Digital concepts rapidly explored and developed with AI-assisted workflows.",
+  },
+  {
+    title: "WordPress",
+    text: "Professional responsive websites and custom WordPress implementations.",
+  },
+];
+
+/* ------------------------------------------------------------------ */
+/* AI-Assisted Creative Projects — clearly labeled concept work        */
+/* ------------------------------------------------------------------ */
+export interface AiProject {
+  title: string;
+  kind: string;
+  concept: string;
+  tool: string;
+  result: string;
+  image: string;
+  isConcept: boolean;
+}
+
+export const AI_PROJECTS: AiProject[] = [
+  {
+    title: "AI-Generated Landing Page",
+    kind: "AI-Assisted Website Creation",
+    concept: "A landing page concept explored through AI-assisted ideation and design generation.",
+    tool: "Generative AI tools + HTML/CSS",
+    result: "Design exploration and layout concepts validated through rapid iteration.",
+    image: ASSETS.aiExpLanding,
+    isConcept: true,
+  },
+  {
+    title: "Logo Concept Exploration",
+    kind: "AI-Assisted Logo & Brand Design",
+    concept: "A set of letterform brand marks generated and refined as identity starting points.",
+    tool: "Generative AI tools + Illustrator",
+    result: "Directional brand marks ready for client-driven refinement.",
+    image: ASSETS.aiExpLogo,
+    isConcept: true,
+  },
+  {
+    title: "Flyer Design Variants",
+    kind: "AI-Assisted Flyer Design",
+    concept: "Editorial flyer compositions explored as creative concepts and visual starting points.",
+    tool: "Generative AI tools + Photoshop",
+    result: "Layout and typographic directions to build final campaign materials from.",
+    image: ASSETS.aiExpFlyer,
+    isConcept: true,
+  },
+  {
+    title: "Mobile UI Explorations",
+    kind: "AI-Assisted UI/UX",
+    concept: "Interface variations for a mobile flow — layout, hierarchy and interaction options.",
+    tool: "Generative AI tools + Figma",
+    result: "A shortlist of interface directions chosen with design judgment, not left to the tool.",
+    image: ASSETS.aiExpUi,
+    isConcept: true,
+  },
+];
+
+/* ------------------------------------------------------------------ */
+/* Journey — interactive animated timeline                             */
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
 /* Currently Becoming — learning direction                             */
 /* ------------------------------------------------------------------ */
 export const LEARNING_TOPICS = [
-  "Cybersecurity",
-  "AI Engineering",
+  "AI-Assisted Development",
   "AI Automation",
+  "Cybersecurity",
   "Python",
-  "Networking",
   "Linux",
+  "Networking",
   "Software Engineering",
   "Cloud Technologies",
 ];
@@ -456,9 +631,8 @@ export const JOURNEY_STEPS = [
   "IT Support",
   "UI/UX Design",
   "Digital Product Design",
-  "WordPress Development",
-  "Software Development",
-  "AI & Automation",
+  "Web Development",
+  "AI-Assisted Creative Technology",
   "Cybersecurity",
 ];
 

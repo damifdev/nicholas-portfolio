@@ -16,7 +16,7 @@ export function BeyondScreenSection() {
     <section className="border-t border-border py-24 md:py-32">
       <div className="container">
         <SectionHeading
-          index="09"
+          index="13"
           kicker="Beyond the Screen"
           title="The person behind the portfolio."
         />
@@ -91,7 +91,7 @@ export function CvSection() {
                 Oluwadamilola Samson-Ajai
               </h2>
               <p className="mt-2 text-sm text-muted-foreground md:text-base">
-                UI/UX Designer &amp; Software Developer
+                UI/UX Designer | Web Developer | AI-Assisted Creative
               </p>
 
               <div className="mt-8 grid gap-x-10 gap-y-6 text-sm sm:grid-cols-2">
@@ -137,7 +137,7 @@ export function CvSection() {
         <div className="flex items-start justify-between">
           <div>
             <h3 className="font-display text-3xl font-medium">Oluwadamilola Samson-Ajai</h3>
-            <p className="mt-1 text-sm text-muted-foreground">UI/UX Designer &amp; Software Developer</p>
+            <p className="mt-1 text-sm text-muted-foreground">UI/UX Designer | Web Developer | AI-Assisted Creative</p>
           </div>
           <button onClick={() => dialogRef.current?.close()} aria-label="Close CV" className="text-muted-foreground hover:text-[var(--ember)]">
             ✕
@@ -228,7 +228,7 @@ export function Footer() {
       <div className="container flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-display text-lg font-medium">Oluwadamilola Samson-Ajai</p>
-          <p className="mt-1 text-sm text-muted-foreground">UI/UX Designer · Software Developer</p>
+          <p className="mt-1 text-sm text-muted-foreground">UI/UX Designer · Web Developer · AI-Assisted Creative</p>
         </div>
         <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Footer">
           <a href={SOCIALS.linkedin} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">LinkedIn</a>

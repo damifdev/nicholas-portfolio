@@ -5,9 +5,9 @@
  */
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { ASSETS, SOCIALS } from "@/lib/data";
+import { ASSETS, POSITIONING, SOCIALS } from "@/lib/data";
 
-const WORDS = ["Design", "Development", "Technology", "AI & Automation"];
+const WORDS = ["Design", "Websites", "AI", "Visual Identity", "Creative Assets"];
 
 export default function Hero() {
   const [wordIdx, setWordIdx] = useState(0);
@@ -46,28 +46,28 @@ export default function Hero() {
           <div>
             <p className="reveal micro-label mb-6 flex items-center gap-3" style={{ ["--reveal-delay" as string]: "100ms" }}>
               <span className="inline-block h-[1px] w-10 bg-[var(--ember)]" />
-              Oluwadamilola Samson-Ajai — UI/UX Designer &amp; Software Developer
+              {POSITIONING.badge}
             </p>
 
-            <h1 className="font-display text-[16vw] font-medium leading-[0.92] tracking-tight sm:text-[9vw] lg:text-[5.4rem]">
+            <h1 className="font-display text-[15vw] font-medium leading-[0.95] tracking-tight sm:text-[8.2vw] lg:text-[5rem]">
               <span className="reveal-clip block" style={{ ["--reveal-delay" as string]: "150ms" }}>
-                I design digital
+                I design digital experiences,
               </span>
               <span className="reveal-clip block" style={{ ["--reveal-delay" as string]: "280ms" }}>
-                experiences that{" "}
-                <em className="italic text-[var(--ember)]">feel</em> as good
+                build <em className="italic text-[var(--ember)]">websites</em>,
               </span>
               <span className="reveal-clip block" style={{ ["--reveal-delay" as string]: "410ms" }}>
-                as they <em className="italic">work</em>.
+                and use <em className="italic">AI</em> to bring ideas to life.
               </span>
             </h1>
 
             <p
               className="reveal mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
               style={{ ["--reveal-delay" as string]: "560ms" }}>
-              I'm Oluwadamilola — a UI/UX Designer and Software Developer
-              focused on thoughtful interfaces, useful digital products, and
-              experiences that connect{" "}
+              I'm Oluwadamilola — a UI/UX Designer and Web Developer creating
+              thoughtful digital experiences, responsive websites, visual identities
+              and creative assets, using a combination of design thinking, technology
+              and{" "}
               <span className="relative inline-block min-w-[9.5rem] align-baseline whitespace-nowrap">
                 <span className="absolute inset-0 flex items-center" aria-hidden="true">
                   {WORDS.map((w, i) => (
@@ -162,7 +162,7 @@ export default function Hero() {
               style={{ ["--reveal-delay" as string]: "450ms" }}>
               <img
                 src={ASSETS.portrait}
-                alt="Oluwadamilola Samson-Ajai, UI/UX Designer and Software Developer"
+                alt="Oluwadamilola Samson-Ajai, UI/UX Designer, Web Developer and AI-Assisted Creative"
                 className="aspect-[4/5] w-full object-cover"
                 loading="eager"
               />
