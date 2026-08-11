@@ -163,10 +163,10 @@ export default function Hero() {
                 <div
                   title="Oluwadamilola Samson-Ajai"
                   className="group relative select-none font-display text-6xl font-semibold tracking-tight text-foreground/90 transition-colors duration-300 xl:text-7xl drop-shadow-[0_4px_24px_rgba(10,9,9,0.9)]">
-                  <span className="inline-block origin-bottom transition-transform duration-500 group-hover:-translate-y-2">O</span>
-                  <span className="inline-block origin-bottom transition-transform duration-500 delay-75 group-hover:-translate-y-3">S</span>
-                  <span className="inline-block origin-bottom transition-transform duration-500 delay-150 group-hover:-translate-y-2">A</span>
-                  <span className="text-[var(--ember)]">.</span>
+                  <span className="osa-letter inline-block origin-bottom transition-transform duration-500 group-hover:-translate-y-2" style={{ "--animation-delay": "900ms" } as React.CSSProperties}>O</span>
+                  <span className="osa-letter inline-block origin-bottom transition-transform duration-500 delay-75 group-hover:-translate-y-3" style={{ "--animation-delay": "975ms" } as React.CSSProperties}>S</span>
+                  <span className="osa-letter inline-block origin-bottom transition-transform duration-500 delay-150 group-hover:-translate-y-2" style={{ "--animation-delay": "1050ms" } as React.CSSProperties}>A</span>
+                  <span className="osa-letter inline-block origin-bottom transition-transform duration-500 text-[var(--ember)]" style={{ "--animation-delay": "1125ms" } as React.CSSProperties}>.</span>
                   <span className="absolute -top-8 left-0 whitespace-nowrap font-mono text-[10px] tracking-widest text-muted-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     Oluwadamilola Samson-Ajai
                   </span>

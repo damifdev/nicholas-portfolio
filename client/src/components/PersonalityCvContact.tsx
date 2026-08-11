@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import { SectionHeading } from "./SelectedWork";
 import { ASSETS, PERSONAL_THEMES, SOCIALS } from "@/lib/data";
 
-const CV_PDF = "/manus-storage/nicholas-cv_090563b6.pdf";
+const CV_PDF = "/manus-storage/cv-updated_84840555.pdf";
 
 export function BeyondScreenSection() {
   return (
