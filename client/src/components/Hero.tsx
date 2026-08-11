@@ -157,6 +157,22 @@ export default function Hero() {
 
           {/* Right — portrait + animated initials */}
           <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+            {/* Animated OSA initials — pinned at viewport right edge, visible in full */}
+            <div className="pointer-events-none absolute -right-6 top-0 z-10 hidden lg:block lg:-translate-y-[72%]" aria-hidden="true">
+              <div className="pr-6">
+                <div
+                  title="Oluwadamilola Samson-Ajai"
+                  className="group relative select-none font-display text-6xl font-semibold tracking-tight text-foreground/90 transition-colors duration-300 xl:text-7xl drop-shadow-[0_4px_24px_rgba(10,9,9,0.9)]">
+                  <span className="inline-block origin-bottom transition-transform duration-500 group-hover:-translate-y-2">O</span>
+                  <span className="inline-block origin-bottom transition-transform duration-500 delay-75 group-hover:-translate-y-3">S</span>
+                  <span className="inline-block origin-bottom transition-transform duration-500 delay-150 group-hover:-translate-y-2">A</span>
+                  <span className="text-[var(--ember)]">.</span>
+                  <span className="absolute -top-8 left-0 whitespace-nowrap font-mono text-[10px] tracking-widest text-muted-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    Oluwadamilola Samson-Ajai
+                  </span>
+                </div>
+              </div>
+            </div>
             <div
               className="reveal relative"
               style={{ ["--reveal-delay" as string]: "450ms" }}>
@@ -177,21 +193,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Animated OSA initials — hover reveals full name */}
-            <div className="absolute right-0 top-0 z-10 translate-x-[75%] -translate-y-[60%] lg:-translate-y-[66%]">
-              <div
-                title="Oluwadamilola Samson-Ajai"
-                data-cursor="magnet"
-                className="group relative select-none font-display text-6xl font-semibold tracking-tight text-foreground transition-colors duration-300 sm:text-7xl lg:text-8xl drop-shadow-[0_4px_24px_rgba(10,9,9,0.9)]">
-                <span className="inline-block origin-bottom transition-transform duration-500 group-hover:-translate-y-2">O</span>
-                <span className="inline-block origin-bottom transition-transform duration-500 delay-75 group-hover:-translate-y-3">S</span>
-                <span className="inline-block origin-bottom transition-transform duration-500 delay-150 group-hover:-translate-y-2">A</span>
-                <span className="text-[var(--ember)]">.</span>
-                <span className="absolute -top-8 left-0 whitespace-nowrap font-mono text-[10px] tracking-widest text-muted-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Oluwadamilola Samson-Ajai
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
