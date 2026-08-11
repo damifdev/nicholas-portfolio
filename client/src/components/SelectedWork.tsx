@@ -69,11 +69,13 @@ function ProjectCard({
             src={project.image}
             alt={`${project.title} — project preview`}
             loading="lazy"
-            className={`aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] ${
-              variant === "large" ? "lg:aspect-[16/10]" : ""
+            className={`w-full bg-background object-contain transition-transform duration-700 ease-out group-hover:scale-[1.04] ${
+              variant === "large"
+                ? "h-[220px] lg:h-[250px]"
+                : "h-[200px] lg:h-[230px]"
             }`}
             style={{
-              transform: `scale(${1 + (Math.abs(mouse.x - 0.5) * 0.06).toFixed(3)}) translate(${((mouse.x - 0.5) * 10).toFixed(1)}px, ${((mouse.y - 0.5) * 8).toFixed(1)}px)`,
+              transform: `scale(${(1 + Math.max(0, Math.min(1, Math.abs(mouse.x - 0.5) * 2)) * 0.06).toFixed(3)}) translate(${(Math.max(-0.5, Math.min(0.5, mouse.x - 0.5)) * 10).toFixed(1)}px, ${(Math.max(-0.5, Math.min(0.5, mouse.y - 0.5)) * 8).toFixed(1)}px)`,
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#141311]/70 via-transparent to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-60" />

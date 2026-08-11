@@ -88,9 +88,9 @@ export const PROJECTS: Project[] = [
     description:
       "Designing the digital journey that takes a visitor from first glance to a completed insurance purchase — clarity, trust and a responsive experience at every step.",
     tech: ["Figma", "UX Research", "Responsive Design", "Prototyping"],
-    image: "/manus-storage/card-sanlam_e2c40739.png",
+    image: "/manus-storage/card-sanlam_89c11e5c.png",
     gallery: [
-      "/manus-storage/card-sanlam_e2c40739.png",
+      "/manus-storage/card-sanlam_89c11e5c.png",
     ],
     highlight: "Insurance purchase journey · product thinking · responsive experience",
     caseStudy: {
@@ -123,9 +123,9 @@ export const PROJECTS: Project[] = [
     description:
       "A mobile experience for bank agents and customers, shaped around real workflows, information architecture and flows that feel effortless in the hand.",
     tech: ["Figma", "User Flows", "Information Architecture", "Mobile UX"],
-    image: "/manus-storage/card-bancassurance_b664b6d0.png",
+    image: "/manus-storage/card-bancassurance_fe2158f1.png",
     gallery: [
-      "/manus-storage/card-bancassurance_b664b6d0.png",
+      "/manus-storage/card-bancassurance_fe2158f1.png",
     ],
     highlight: "Mobile UX · agent workflows · user flows",
     caseStudy: {
@@ -158,9 +158,9 @@ export const PROJECTS: Project[] = [
     description:
       "Simplifying complex agent operations into a mobile interface that makes a demanding job feel manageable — UX architecture and usability first.",
     tech: ["Figma", "UX Architecture", "Mobile UI", "Usability"],
-    image: "/manus-storage/card-virtual-agent_3c2695f1.png",
+    image: "/manus-storage/card-virtual-agent_7e8e3e9e.png",
     gallery: [
-      "/manus-storage/card-virtual-agent_3c2695f1.png",
+      "/manus-storage/card-virtual-agent_7e8e3e9e.png",
     ],
     highlight: "Simplifying complex workflows · UX architecture · usability",
     caseStudy: {

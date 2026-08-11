@@ -281,10 +281,17 @@ export function Footer() {
           <p className="font-display text-lg font-medium">Oluwadamilola Samson-Ajai</p>
           <p className="mt-1 text-sm text-muted-foreground">UI/UX Designer · Web Developer · AI-Assisted Creative</p>
         </div>
-        <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Footer">
+        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2" aria-label="Footer">
           <a href={SOCIALS.linkedin} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">LinkedIn</a>
           <a href={SOCIALS.github} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">GitHub</a>
-          <a href={SOCIALS.emailHref} className="text-sm text-muted-foreground hover:text-[var(--ember)]">Email</a>
+          <div className="flex items-center gap-2">
+            <a href={SOCIALS.emailHref} className="text-sm text-muted-foreground hover:text-[var(--ember)]">Email</a>
+            <CopyButton value="damilola.samsonajai@gmail.com" label="Copy email" copiedLabel="Copied" />
+          </div>
+          <div className="flex items-center gap-2">
+            <a href={SOCIALS.phoneHref} className="text-sm text-muted-foreground hover:text-[var(--ember)]">+234 912 293 2268</a>
+            <CopyButton value="+2349122932268" label="Copy number" copiedLabel="Copied" />
+          </div>
           <a href={SOCIALS.behance} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">Behance</a>
           <a href="#cv" onClick={(e) => { e.preventDefault(); document.getElementById("cv")?.scrollIntoView({ behavior: "smooth" }); }} className="text-sm text-muted-foreground hover:text-[var(--ember)]">CV</a>
         </nav>
