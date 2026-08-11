@@ -169,7 +169,7 @@ export default function Hero() {
               {/* caption plate */}
               <div className="absolute -bottom-4 left-4 right-4 flex items-center justify-between border border-border bg-[#141311] px-4 py-3">
                 <span className="font-mono text-[11px] tracking-wider text-foreground/80">
-                  NICHOLAS SAMSON-AJAI
+                  OLUWADAMILOLA SAMSON-AJAI
                 </span>
                 <span className="font-mono text-[11px] text-[var(--ember)]">
                   DESIGN × DEV × TECH

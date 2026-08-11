@@ -44,6 +44,7 @@ export interface Project {
   description: string;
   tech: string[];
   image: string;
+  gallery?: string[];
   highlight?: string;
   caseStudy: {
     overview: string;
@@ -66,7 +67,10 @@ export const PROJECTS: Project[] = [
     description:
       "Designing the digital journey that takes a visitor from first glance to a completed insurance purchase — clarity, trust and a responsive experience at every step.",
     tech: ["Figma", "UX Research", "Responsive Design", "Prototyping"],
-    image: "/manus-storage/project-sanlam-buy_206ec58d.png",
+    image: "/manus-storage/card-sanlam_e2c40739.png",
+    gallery: [
+      "/manus-storage/card-sanlam_e2c40739.png",
+    ],
     highlight: "Insurance purchase journey · product thinking · responsive experience",
     caseStudy: {
       overview:
@@ -98,7 +102,10 @@ export const PROJECTS: Project[] = [
     description:
       "A mobile experience for bank agents and customers, shaped around real workflows, information architecture and flows that feel effortless in the hand.",
     tech: ["Figma", "User Flows", "Information Architecture", "Mobile UX"],
-    image: "/manus-storage/project-bancassurance_402c3bcf.png",
+    image: "/manus-storage/card-bancassurance_b664b6d0.png",
+    gallery: [
+      "/manus-storage/card-bancassurance_b664b6d0.png",
+    ],
     highlight: "Mobile UX · agent workflows · user flows",
     caseStudy: {
       overview:
@@ -130,7 +137,10 @@ export const PROJECTS: Project[] = [
     description:
       "Simplifying complex agent operations into a mobile interface that makes a demanding job feel manageable — UX architecture and usability first.",
     tech: ["Figma", "UX Architecture", "Mobile UI", "Usability"],
-    image: "/manus-storage/project-virtual-agent_d19ec6cf.png",
+    image: "/manus-storage/card-virtual-agent_3c2695f1.png",
+    gallery: [
+      "/manus-storage/card-virtual-agent_3c2695f1.png",
+    ],
     highlight: "Simplifying complex workflows · UX architecture · usability",
     caseStudy: {
       overview:
@@ -162,7 +172,10 @@ export const PROJECTS: Project[] = [
     description:
       "Hands-on experience with POS machines and multi-location operations — where technology, operations and user experience meet the real world.",
     tech: ["POS Systems", "Operations Support", "Troubleshooting", "User Experience"],
-    image: "/manus-storage/project-pos-ops_b985110a.png",
+    image: "/manus-storage/card-pos_98786f13.png",
+    gallery: [
+      "/manus-storage/card-pos_98786f13.png",
+    ],
     highlight: "Technology × Operations × User Experience",
     caseStudy: {
       overview:

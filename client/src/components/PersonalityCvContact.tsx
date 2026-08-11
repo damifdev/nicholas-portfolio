@@ -88,7 +88,7 @@ export function CvSection() {
                 <span className="micro-label">Curriculum Vitae</span>
               </div>
               <h2 className="mt-6 font-display text-3xl font-medium tracking-tight md:text-5xl">
-                Nicholas Samson-Ajai
+                Oluwadamilola Samson-Ajai
               </h2>
               <p className="mt-2 text-sm text-muted-foreground md:text-base">
                 UI/UX Designer &amp; Software Developer
@@ -136,7 +136,7 @@ export function CvSection() {
         aria-label="Full CV">
         <div className="flex items-start justify-between">
           <div>
-            <h3 className="font-display text-3xl font-medium">Nicholas Samson-Ajai</h3>
+            <h3 className="font-display text-3xl font-medium">Oluwadamilola Samson-Ajai</h3>
             <p className="mt-1 text-sm text-muted-foreground">UI/UX Designer &amp; Software Developer</p>
           </div>
           <button onClick={() => dialogRef.current?.close()} aria-label="Close CV" className="text-muted-foreground hover:text-[var(--ember)]">
@@ -238,7 +238,7 @@ export function Footer() {
           <a href="#cv" onClick={(e) => { e.preventDefault(); document.getElementById("cv")?.scrollIntoView({ behavior: "smooth" }); }} className="text-sm text-muted-foreground hover:text-[var(--ember)]">CV</a>
         </nav>
         <p className="font-mono text-xs text-muted-foreground">
-          Designed &amp; built by Nicholas Samson-Ajai · {year}
+          Designed &amp; built by Oluwadamilola Samson-Ajai · {year}
         </p>
       </div>
     </footer>

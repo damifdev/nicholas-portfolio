@@ -128,6 +128,19 @@ function CaseStudyDialog({
         className="relative w-full max-w-3xl bg-[#171614] border border-border"
         onClick={(e) => e.stopPropagation()}>
         <img src={project.image} alt={project.title} className="aspect-[16/9] w-full object-cover" />
+        {project.gallery && project.gallery.length > 1 && (
+          <div className="flex gap-2 overflow-x-auto border-b border-border bg-[#0a0909] p-3">
+            {project.gallery.map((g, i) => (
+              <img
+                key={`${g}-${i}`}
+                src={g}
+                alt={`${project.title} screen ${i + 1}`}
+                loading="lazy"
+                className="h-28 w-auto shrink-0 border border-border object-contain transition-opacity duration-200 hover:opacity-80 sm:h-36"
+              />
+            ))}
+          </div>
+        )}
         <button
           onClick={onClose}
           data-cursor="magnet"

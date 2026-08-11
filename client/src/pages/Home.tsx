@@ -1,6 +1,6 @@
 /*
  * INK & EMBER — Home: composed from modular section components.
- * Dark editorial digital-studio portfolio for Nicholas Samson-Ajai.
+ * Dark editorial digital-studio portfolio for Oluwadamilola Samson-Ajai.
  */
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
