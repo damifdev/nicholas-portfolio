@@ -3,8 +3,8 @@
  * Contact, and minimal footer. Warm personal section breaks the dark rhythm
  * with an amber-lit image; contact keeps type massive.
  */
-import { useEffect, useRef } from "react";
-import { ArrowUpRight, Download, FileText } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowUpRight, Check, Copy, Download, FileText } from "lucide-react";
 import { toast } from "sonner";
 import { SectionHeading } from "./SelectedWork";
 import { ASSETS, PERSONAL_THEMES, SOCIALS } from "@/lib/data";
@@ -197,19 +197,33 @@ export function ContactSection() {
         </div>
 
         <div
-          className="reveal mt-16 flex flex-col gap-x-10 gap-y-4 border-t border-border pt-8 md:flex-row md:flex-wrap md:items-start"
+          className="reveal mt-16 flex flex-col gap-x-10 gap-y-5 border-t border-border pt-8 md:flex-row md:flex-wrap md:items-start"
           style={{ ["--reveal-delay" as string]: "480ms" }}>
-          <div className="flex flex-col gap-1">
-            <a href={SOCIALS.phoneHref} className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
-              +234 912 293 2268
-            </a>
-            <span className="text-[10px] tracking-widest text-muted-foreground/60">WHATSAPP &amp; CALLS</span>
+          <div className="flex items-center gap-3">
+            <div className="flex flex-col gap-1">
+              <a href={SOCIALS.phoneHref} className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
+                +234 912 293 2268
+              </a>
+              <span className="text-[10px] tracking-widest text-muted-foreground/60">WHATSAPP &amp; CALLS</span>
+            </div>
+            <CopyButton
+              value="+2349122932268"
+              copiedLabel="Copied"
+              label="Copy number"
+            />
           </div>
-          <div className="flex flex-col gap-1">
-            <a href={SOCIALS.emailHref} className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
-              damilola.samsonajai@gmail.com
-            </a>
-            <span className="text-[10px] tracking-widest text-muted-foreground/60">EMAIL</span>
+          <div className="flex items-center gap-3">
+            <div className="flex flex-col gap-1">
+              <a href={SOCIALS.emailHref} className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
+                damilola.samsonajai@gmail.com
+              </a>
+              <span className="text-[10px] tracking-widest text-muted-foreground/60">EMAIL</span>
+            </div>
+            <CopyButton
+              value="damilola.samsonajai@gmail.com"
+              copiedLabel="Copied"
+              label="Copy email"
+            />
           </div>
           <div className="flex flex-col gap-1">
             <a href={SOCIALS.linkedin} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
@@ -229,6 +243,31 @@ export function ContactSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+/* ---------------- Copy button ---------------- */
+function CopyButton({ value, label, copiedLabel }: { value: string; label: string; copiedLabel: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      title={label}
+      onClick={() => {
+        navigator.clipboard.writeText(value).then(() => {
+          setCopied(true);
+          toast.success(`${copiedLabel} to clipboard`);
+          setTimeout(() => setCopied(false), 1800);
+        });
+      }}
+      className="flex h-8 w-8 items-center justify-center border border-border text-muted-foreground transition-all duration-200 hover:border-[var(--ember)] hover:text-[var(--ember)] active:scale-[0.94]">
+      {copied ? (
+        <Check className="h-3.5 w-3.5 text-[var(--ember)]" />
+      ) : (
+        <Copy className="h-3.5 w-3.5" />
+      )}
+    </button>
   );
 }
 
