@@ -8,6 +8,7 @@
 export const ASSETS = {
   monogram: "/manus-storage/osa-monogram_85fa557c.png",
   portrait: "/manus-storage/portrait-real_5e319342.png",
+  portrait2: "/manus-storage/portrait-real-2_bb3cf013.png",
   heroTexture: "/manus-storage/hero-texture_864edf0f.png",
   divider: "/manus-storage/section-divider_12b73b02.png",
   beyondScreen: "/manus-storage/beyond-screen_d69848a5.png",
@@ -34,6 +35,8 @@ export const SOCIALS = {
   linkedin: "https://www.linkedin.com/in/oluwadamilola-samson-ajai-2a2677360",
   github: "https://github.com/damifdev",
   behance: "https://www.behance.net/damilolasamson-ajai",
+  phone: "+234 912 293 2268",
+  phoneHref: "tel:+2349122932268",
   whatsapp: "https://wa.me/2349122932268",
 };
 

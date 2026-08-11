@@ -119,8 +119,8 @@ export function CvSection() {
             </div>
             <div className="relative hidden h-full min-h-[280px] lg:block">
               <img
-                src={ASSETS.portrait}
-                alt=""
+                src={ASSETS.portrait2}
+                alt="Oluwadamilola Samson-Ajai, portrait"
                 className="absolute inset-0 h-full w-full object-cover opacity-70"
                 loading="lazy"
               />
@@ -197,14 +197,26 @@ export function ContactSection() {
         </div>
 
         <div
-          className="reveal mt-16 flex flex-wrap gap-x-10 gap-y-4 border-t border-border pt-8"
+          className="reveal mt-16 flex flex-col gap-x-10 gap-y-4 border-t border-border pt-8 md:flex-row md:flex-wrap md:items-start"
           style={{ ["--reveal-delay" as string]: "480ms" }}>
-          <a href={SOCIALS.emailHref} className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
-            Email
-          </a>
-          <a href={SOCIALS.linkedin} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
-            LinkedIn
-          </a>
+          <div className="flex flex-col gap-1">
+            <a href={SOCIALS.phoneHref} className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
+              +234 912 293 2268
+            </a>
+            <span className="text-[10px] tracking-widest text-muted-foreground/60">WHATSAPP &amp; CALLS</span>
+          </div>
+          <div className="flex flex-col gap-1">
+            <a href={SOCIALS.emailHref} className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
+              damilola.samsonajai@gmail.com
+            </a>
+            <span className="text-[10px] tracking-widest text-muted-foreground/60">EMAIL</span>
+          </div>
+          <div className="flex flex-col gap-1">
+            <a href={SOCIALS.linkedin} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
+              LinkedIn
+            </a>
+            <span className="text-[10px] tracking-widest text-muted-foreground/60">PROFILE</span>
+          </div>
           <a href={SOCIALS.github} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
             GitHub
           </a>
