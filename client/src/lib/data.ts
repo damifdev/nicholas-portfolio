@@ -6,13 +6,13 @@
  */
 
 export const ASSETS = {
-  monogram: "/manus-storage/osa-monogram_85fa557c.png",
-  portrait: "/manus-storage/portrait-real_5e319342.png",
-  portrait2: "/manus-storage/portrait-real-2_bb3cf013.png",
-  heroTexture: "/manus-storage/hero-texture_864edf0f.png",
+  monogram: "/manus-storage/osa-monogram_a2054be2.webp",
+  portrait: "/manus-storage/portrait-real_edfda21a.webp",
+  portrait2: "/manus-storage/portrait-real-2_45f9f0c1.webp",
+  heroTexture: "/manus-storage/hero-texture_9b2bfce5.webp",
   divider: "/manus-storage/section-divider_12b73b02.png",
   beyondScreen: "/manus-storage/beyond-screen_d69848a5.png",
-  learningDirection: "/manus-storage/learning-direction_430ee304.png",
+  learningDirection: "/manus-storage/learning-direction_05f69280.webp",
   aiCreativeBanner: "/manus-storage/ai-creative-banner_5a38019b.png",
   aiExpLanding: "/manus-storage/ai-exp-landing_672885a2.png",
   aiExpLogo: "/manus-storage/ai-exp-logo_b18a01b0.png",
@@ -29,9 +29,12 @@ export const NAV_LINKS = [
   { id: "contact", label: "Contact", href: "#contact" },
 ];
 
+/* Email href now assembles from fragments at runtime (see emailObfuscation.ts) */
+import { EMAIL_ADDRESS, EMAIL_HREF } from "./emailObfuscation";
+
 export const SOCIALS = {
-  email: "damilola.samsonajai@gmail.com",
-  emailHref: "mailto:damilola.samsonajai@gmail.com",
+  email: EMAIL_ADDRESS,
+  emailHref: EMAIL_HREF,
   linkedin: "https://www.linkedin.com/in/oluwadamilola-samson-ajai-2a2677360",
   github: "https://github.com/damifdev",
   behance: "https://www.behance.net/damilolasamson-ajai",
@@ -193,7 +196,7 @@ export const PROJECTS: Project[] = [
     description:
       "A full website redesign and rebuild — from an outdated web presence to a modern, responsive site built with WordPress, Elementor and custom front-end craft.",
     tech: ["WordPress", "Elementor", "Astra", "HappyAddons", "HTML", "CSS", "JavaScript"],
-    image: "/manus-storage/project-cgsul_97c55d4d.png",
+    image: "/manus-storage/project-cgsul_d614551d.webp",
     highlight: "Before/after redesign · responsive layouts · migration & hosting",
     caseStudy: {
       overview:
@@ -225,7 +228,7 @@ export const PROJECTS: Project[] = [
     description:
         "Building and maintaining WordPress websites as a professional role — Elementor implementations, responsive front-end development, AI-assisted workflows and ongoing site stewardship.",
     tech: ["WordPress", "Elementor", "HTML", "CSS", "JavaScript", "AI-Assisted Development"],
-    image: "/manus-storage/project-1999ideas_da261368.png",
+    image: "/manus-storage/project-1999ideas_49011381.webp",
     highlight: "WordPress development · responsive design · site maintenance",
     caseStudy: {
       overview:
@@ -617,13 +620,13 @@ export const LEARNING_TOPICS = [
 export const CERTIFICATIONS = {
   completed: [
     { name: "Google UX Design Professional Certificate", status: "completed" as const },
-    { name: "CompTIA Security+ — HiiT Plc", status: "completed" as const },
+    { name: "Cybersecurity Training (Security+ Fundamentals) — HiiT Plc", status: "completed" as const },
     { name: "Cisco Certified Network Associate (CCNA) — HiiT Plc", status: "completed" as const },
     { name: "Certified Ethical Hacker (CEH) — HiiT Plc", status: "completed" as const },
     { name: "Python Programming with AI Tools — HiiT Plc", status: "completed" as const },
   ],
   inProgress: [
-    { name: "CompTIA Security+ — Professional Certification", status: "learning" as const },
+    { name: "CompTIA Security+ Professional Exam — Certification Prep", status: "learning" as const },
     { name: "French Language — Duolingo", status: "learning" as const },
     { name: "Frontend Development", status: "learning" as const },
   ],

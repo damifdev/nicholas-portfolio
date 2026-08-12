@@ -11,10 +11,20 @@ const WORDS = ["Design", "Websites", "AI", "Visual Identity", "Creative Assets"]
 
 export default function Hero() {
   const [wordIdx, setWordIdx] = useState(0);
+  const [started, setStarted] = useState(false);
 
   useEffect(() => {
+    // Hand over to the animation only after the page has painted, so a cold
+    // load never shows a half-transitioned word cluster. Visitors with
+    // prefers-reduced-motion keep the static first word forever.
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) return;
+    const first = requestAnimationFrame(() => setStarted(true));
     const t = setInterval(() => setWordIdx((i) => (i + 1) % WORDS.length), 2400);
-    return () => clearInterval(t);
+    return () => {
+      cancelAnimationFrame(first);
+      clearInterval(t);
+    };
   }, []);
 
   return (
@@ -44,12 +54,26 @@ export default function Hero() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14">
           {/* Left — headline block */}
           <div>
-            <p className="reveal micro-label mb-6 flex items-center gap-3" style={{ ["--reveal-delay" as string]: "100ms" }}>
-              <span className="inline-block h-[1px] w-10 bg-[var(--ember)]" />
-              {POSITIONING.badge}
+            <p
+              className="reveal micro-label mb-6 flex items-center gap-3 sm:gap-4"
+              style={{ ["--reveal-delay" as string]: "100ms" }}>
+              <span className="inline-block h-[1px] w-8 shrink-0 bg-[var(--ember)] sm:w-10" />
+              <span className="flex flex-col gap-1.5 leading-tight sm:flex-row sm:items-center sm:gap-4">
+                <span className="inline-flex items-center gap-2 sm:gap-3">
+                  UI/UX Design
+                  <span className="hidden text-[var(--ember)] sm:inline" aria-hidden="true">×</span>
+                  <span className="text-[var(--ember)] sm:hidden" aria-hidden="true">·</span>
+                  Web Development
+                </span>
+                <span className="inline-flex items-center gap-2 sm:gap-3">
+                  <span className="hidden text-[var(--ember)] sm:inline" aria-hidden="true">×</span>
+                  <span className="text-[var(--ember)] sm:hidden" aria-hidden="true">·</span>
+                  AI-Assisted Creative
+                </span>
+              </span>
             </p>
 
-            <h1 className="font-display text-[15vw] font-medium leading-[0.95] tracking-tight sm:text-[8.2vw] lg:text-[5rem]">
+            <h1 className="font-display text-[clamp(2.6rem,11.5vw,6rem)] font-medium leading-[0.95] tracking-tight sm:text-[8.2vw] lg:text-[5rem]">
               <span className="reveal-clip block" style={{ ["--reveal-delay" as string]: "150ms" }}>
                 I design digital experiences,
               </span>
@@ -68,21 +92,22 @@ export default function Hero() {
               thoughtful digital experiences, responsive websites, visual identities
               and creative assets, using a combination of design thinking, technology
               and{" "}
-              <span className="relative inline-block min-w-[9.5rem] align-baseline whitespace-nowrap">
-                <span className="absolute inset-0 flex items-center" aria-hidden="true">
-                  {WORDS.map((w, i) => (
-                    <span
-                      key={w}
-                      className={`absolute left-0 font-semibold text-foreground transition-all duration-500 ${
-                        i === wordIdx
+              <span
+                className="relative inline-block h-[1.15em] min-w-[9.5rem] align-baseline whitespace-nowrap overflow-hidden"
+                aria-live="polite">
+                {WORDS.map((w, i) => (
+                  <span
+                    key={w}
+                    className={`absolute left-0 inline-block font-semibold text-foreground transition-all duration-500 ${
+                      !started
+                        ? "translate-y-0 opacity-100"
+                        : i === wordIdx
                           ? "translate-y-0 opacity-100"
-                          : "translate-y-3 opacity-0"
-                      }`}>
-                      {w}
-                    </span>
-                  ))}
-                </span>
-                <span className="invisible">Design</span>
+                          : "translate-y-full opacity-0"
+                    } ${!started && i !== 0 ? "opacity-0" : ""}`}>
+                    {w}
+                  </span>
+                ))}
               </span>
               .
             </p>
@@ -114,14 +139,14 @@ export default function Hero() {
 
             {/* Social row */}
             <div
-              className="reveal mt-10 flex items-center gap-5"
+              className="reveal mt-10 flex flex-wrap items-center gap-x-5 gap-y-3"
               style={{ ["--reveal-delay" as string]: "800ms" }}>
               <span className="micro-label">Elsewhere</span>
               <span className="h-[1px] w-10 bg-border" />
               <a
                 href={SOCIALS.linkedin}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 data-cursor="magnet"
                 className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]"
                 aria-label="LinkedIn">
@@ -130,7 +155,7 @@ export default function Hero() {
               <a
                 href={SOCIALS.github}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 data-cursor="magnet"
                 className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]"
                 aria-label="GitHub">
@@ -146,7 +171,7 @@ export default function Hero() {
               <a
                 href={SOCIALS.behance}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 data-cursor="magnet"
                 className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]"
                 aria-label="Behance">

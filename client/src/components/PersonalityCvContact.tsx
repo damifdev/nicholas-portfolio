@@ -4,6 +4,7 @@
  * with an amber-lit image; contact keeps type massive.
  */
 import { useEffect, useRef, useState } from "react";
+import { EMAIL_PARTS } from "@/lib/emailObfuscation";
 import { ArrowUpRight, Check, Copy, Download, FileText } from "lucide-react";
 import { toast } from "sonner";
 import { SectionHeading } from "./SelectedWork";
@@ -215,29 +216,29 @@ export function ContactSection() {
           <div className="flex items-center gap-3">
             <div className="flex flex-col gap-1">
               <a href={SOCIALS.emailHref} className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
-                damilola.samsonajai@gmail.com
+                <EmailDisplay />
               </a>
               <span className="text-[10px] tracking-widest text-muted-foreground/60">EMAIL</span>
             </div>
             <CopyButton
-              value="damilola.samsonajai@gmail.com"
+              value={EMAIL_PARTS.join("")}
               copiedLabel="Copied"
               label="Copy email"
             />
           </div>
           <div className="flex flex-col gap-1">
-            <a href={SOCIALS.linkedin} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
+            <a href={SOCIALS.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
               LinkedIn
             </a>
             <span className="text-[10px] tracking-widest text-muted-foreground/60">PROFILE</span>
           </div>
-          <a href={SOCIALS.github} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
+          <a href={SOCIALS.github} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
             GitHub
           </a>
-          <a href={SOCIALS.whatsapp} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
+          <a href={SOCIALS.whatsapp} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
             WhatsApp
           </a>
-          <a href={SOCIALS.behance} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
+          <a href={SOCIALS.behance} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground transition-colors hover:text-[var(--ember)]">
             Behance
           </a>
         </div>
@@ -247,6 +248,13 @@ export function ContactSection() {
 }
 
 /* ---------------- Copy button ---------------- */
+/* Email obfuscation: the full address is only assembled in JS at render time,
+   so scrapers reading raw HTML (or the bundle as a plain string) don't see it
+   as an intact email token. */
+function EmailDisplay() {
+  return <>{EMAIL_PARTS.join("")}</>;
+}
+
 function CopyButton({ value, label, copiedLabel }: { value: string; label: string; copiedLabel: string }) {
   const [copied, setCopied] = useState(false);
   return (
@@ -282,17 +290,17 @@ export function Footer() {
           <p className="mt-1 text-sm text-muted-foreground">UI/UX Designer · Web Developer · AI-Assisted Creative</p>
         </div>
         <nav className="flex flex-wrap items-center gap-x-6 gap-y-2" aria-label="Footer">
-          <a href={SOCIALS.linkedin} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">LinkedIn</a>
-          <a href={SOCIALS.github} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">GitHub</a>
+          <a href={SOCIALS.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">LinkedIn</a>
+          <a href={SOCIALS.github} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">GitHub</a>
           <div className="flex items-center gap-2">
             <a href={SOCIALS.emailHref} className="text-sm text-muted-foreground hover:text-[var(--ember)]">Email</a>
-            <CopyButton value="damilola.samsonajai@gmail.com" label="Copy email" copiedLabel="Copied" />
+            <CopyButton value={EMAIL_PARTS.join("")} label="Copy email" copiedLabel="Copied" />
           </div>
           <div className="flex items-center gap-2">
             <a href={SOCIALS.phoneHref} className="text-sm text-muted-foreground hover:text-[var(--ember)]">+234 912 293 2268</a>
             <CopyButton value="+2349122932268" label="Copy number" copiedLabel="Copied" />
           </div>
-          <a href={SOCIALS.behance} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">Behance</a>
+          <a href={SOCIALS.behance} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">Behance</a>
           <a href="#cv" onClick={(e) => { e.preventDefault(); document.getElementById("cv")?.scrollIntoView({ behavior: "smooth" }); }} className="text-sm text-muted-foreground hover:text-[var(--ember)]">CV</a>
         </nav>
         <p className="font-mono text-xs text-muted-foreground">
