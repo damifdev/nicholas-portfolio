@@ -153,38 +153,41 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    slug: "virtual-agent-app",
-    title: "Virtual Agent App",
-    category: "Insurance Digital Products",
+    slug: "asset-management",
+    title: "Asset Management",
+    category: "Product Design / UI/UX",
     year: "Sanlam",
-    role: "UI/UX Designer",
+    role: "UI/UX & Product Designer",
     description:
-      "Simplifying complex agent operations into a mobile interface that makes a demanding job feel manageable — UX architecture and usability first.",
-    tech: ["Figma", "UX Architecture", "Mobile UI", "Usability"],
-    image: "/manus-storage/card-virtual-agent_7e8e3e9e.png",
+      "A digital product experience designed to simplify asset management workflows through a structured, intuitive and data-focused interface.",
+    tech: ["Figma", "Product Design", "Dashboard Design", "Information Architecture", "Data-Heavy Interfaces"],
+    image: "/manus-storage/asset-dashboard_7287d154.webp",
     gallery: [
-      "/manus-storage/card-virtual-agent_7e8e3e9e.png",
+      "/manus-storage/asset-dashboard_7287d154.webp",
+      "/manus-storage/asset-list_0ba0ba37.webp",
+      "/manus-storage/asset-login_1da0ea41.webp",
     ],
-    highlight: "Simplifying complex workflows · UX architecture · usability",
+    highlight: "Data-heavy dashboards · asset workflows · business interfaces",
     caseStudy: {
       overview:
-        "A virtual agent application that supports agents in managing their work — clients, tasks and follow-ups — from a single, simplified mobile interface.",
+        "A web-based asset management product designed for Sanlam — an internal tool that helps teams track, search and monitor IT assets through a dashboard, a structured asset register and a branded login experience. My role covered product and interface design: structuring the data, designing the dashboard and building a coherent visual system.",
       problem:
-        "Agent tools often pile feature on feature until the software becomes the obstacle. The challenge was to compress a complex operating model into an interface that feels calm.",
+        "Asset information lives in messy, disconnected places. Teams need a single, structured view of what exists, its condition and who holds it — but data-heavy tools easily become overwhelming. The challenge was to make a large, complex dataset feel organized and easy to work with every day.",
       roleDesc:
-        "UI/UX Designer — responsible for simplifying complex workflows, UX architecture, mobile interface design and overall product usability.",
+        "UI/UX & Product Designer — responsible for the information architecture, dashboard and interface design, data visualization layout and the overall product experience.",
       process: [
-        "Deconstructed the agent's workflow into its essential actions.",
-        "Designed a UX architecture that surfaces what matters now and tucks away what doesn't.",
-        "Built mobile interfaces that prioritize glanceable information and one-tap actions.",
-        "Reviewed usability continuously, removing anything that didn't earn its place.",
+        "Mapped the asset data and defined how teams would search, filter and view it day-to-day.",
+        "Structured the information architecture around a simple sidebar navigation: Dashboard, Assets, Reports and Support.",
+        "Designed the dashboard as the central experience — key metrics at a glance, age analysis and category distribution in charts.",
+        "Built the asset register with search, filtering, pagination and clear status indicators.",
+        "Designed a branded login experience consistent with the product's visual language.",
       ],
       design:
-        "A focused dashboard-style interface with clear task states, minimal navigation depth and calm visual rhythm.",
+        "A structured, hierarchy-led interface: KPI cards surface the numbers that matter first, charts give context, and the asset table uses search, filters, pagination and color-coded status badges (Good / End of life) to keep a large dataset scannable. A consistent sidebar and restrained palette keep the whole product coherent.",
       outcome:
-        "A usable product that reduces cognitive load, letting agents work through complexity without fighting the tool.",
+        "A structured, usable asset management experience — complex inventory data organized into a clear dashboard and workflow that staff can navigate without training.",
       reflection:
-        "Simplification is subtraction with conviction — the hardest design decisions were the features we chose to leave out.",
+        "Data-heavy products taught me that clarity is architecture, not decoration — the dashboard only works because the information behind it was organized first. Designing for real internal workflows means balancing completeness with simplicity, and letting hierarchy do the talking.",
     },
   },
   {
