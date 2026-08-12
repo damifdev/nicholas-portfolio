@@ -617,12 +617,12 @@ export const LEARNING_TOPICS = [
 export const CERTIFICATIONS = {
   completed: [
     { name: "Google UX Design Professional Certificate", status: "completed" as const },
+    { name: "Cybersecurity Training — HiiT Plc", status: "completed" as const },
   ],
   inProgress: [
-    { name: "CompTIA Security+", status: "learning" as const },
-    { name: "CCNA", status: "learning" as const },
-    { name: "CEH", status: "learning" as const },
-    { name: "Python / AI learning path", status: "learning" as const },
+    { name: "CompTIA Security+ — Professional Certification", status: "learning" as const },
+    { name: "French Language — Duolingo", status: "learning" as const },
+    { name: "Frontend Development", status: "learning" as const },
   ],
 };
 
