@@ -70,6 +70,8 @@ export interface Project {
   image: string;
   gallery?: string[];
   highlight?: string;
+  behance?: string;
+  published?: string;
   caseStudy: {
     overview: string;
     problem: string;
@@ -81,78 +83,8 @@ export interface Project {
   };
 }
 
-export const PROJECTS: Project[] = [
-  {
-    slug: "sanlam-gi-buy-insurance",
-    title: "GI Buy Insurance Website",
-    category: "Insurance Digital Products",
-    year: "Sanlam",
-    role: "UI/UX Designer",
-    description:
-      "Designing the digital journey that takes a visitor from first glance to a completed insurance purchase — clarity, trust and a responsive experience at every step.",
-    tech: ["Figma", "UX Research", "Responsive Design", "Prototyping"],
-    image: "/manus-storage/card-sanlam_89c11e5c.png",
-    gallery: [
-      "/manus-storage/card-sanlam_89c11e5c.png",
-    ],
-    highlight: "Insurance purchase journey · product thinking · responsive experience",
-    caseStudy: {
-      overview:
-        "A digital product for Sanlam focused on letting people research and buy insurance online. The website brings the purchase journey to the web, where users can understand products, compare options and complete applications.",
-      problem:
-        "Buying insurance traditionally involves long forms, jargon and uncertainty. The challenge was to make the entire purchase journey feel clear, trustworthy and achievable on any device.",
-      roleDesc:
-        "UI/UX Designer — responsible for the user experience design of the purchase journey, interface design, responsive layouts and product thinking.",
-      process: [
-        "Mapped the end-to-end insurance purchase journey and identified friction points.",
-        "Defined information architecture so product details are easy to find and compare.",
-        "Designed responsive interfaces and interactive prototypes in Figma.",
-        "Iterated layouts around clarity, trust signals and form simplicity.",
-      ],
-      design:
-        "A clean, content-led interface with a clear step-by-step purchase flow, product cards that compare plans at a glance, and a responsive layout that works from phone to desktop.",
-      outcome:
-        "A coherent digital purchase experience that connects product thinking with interface craft across the full funnel.",
-      reflection:
-        "Insurance UX taught me that clarity is a design feature — when complex products are explained simply, trust follows.",
-    },
-  },
-  {
-    slug: "bancassurance-mobile-app",
-    title: "BancAssurance Mobile App",
-    category: "Insurance Digital Products",
-    year: "Sanlam",
-    role: "UI/UX Designer",
-    description:
-      "A mobile experience for bank agents and customers, shaped around real workflows, information architecture and flows that feel effortless in the hand.",
-    tech: ["Figma", "User Flows", "Information Architecture", "Mobile UX"],
-    image: "/manus-storage/card-bancassurance_fe2158f1.png",
-    gallery: [
-      "/manus-storage/card-bancassurance_fe2158f1.png",
-    ],
-    highlight: "Mobile UX · agent workflows · user flows",
-    caseStudy: {
-      overview:
-        "A mobile application supporting bancassurance — the distribution of insurance products through banking channels — designed around the daily work of agents and the needs of customers.",
-      problem:
-        "Agents needed a tool that fit their real workflows rather than forcing them to adapt to the software. Complexity had to be structured so daily tasks stay fast.",
-      roleDesc:
-        "UI/UX Designer — responsible for mobile UX, agent workflows, information architecture, user flows and interface design.",
-      process: [
-        "Studied how agents actually work in the field and documented their key workflows.",
-        "Built the information architecture around those workflows instead of product categories.",
-        "Mapped user flows for the most common tasks and designed them for speed.",
-        "Prototyped and refined the interface for legibility and ease of use on small screens.",
-      ],
-      design:
-        "A task-first mobile interface with clear navigation, workflow-driven screens and a visual language that keeps dense information scannable.",
-      outcome:
-        "A mobile product whose structure mirrors how agents work, reducing the distance between opening the app and completing a task.",
-      reflection:
-        "Good mobile UX starts with the workflow, not the screen — when information architecture follows real behaviour, the interface almost designs itself.",
-    },
-  },
-  {
+export const PROJECTS: Project[
+] = [{
     slug: "asset-management",
     title: "Asset Management",
     category: "Product Design / UI/UX",
@@ -190,7 +122,154 @@ export const PROJECTS: Project[] = [
         "Data-heavy products taught me that clarity is architecture, not decoration — the dashboard only works because the information behind it was organized first. Designing for real internal workflows means balancing completeness with simplicity, and letting hierarchy do the talking.",
     },
   },
-  {
+{
+    slug: "agent-management-app",
+    title: "Agent Management App",
+    category: "UI/UX Design",
+    year: "Sanlam",
+    role: "UI/UX & Product Designer",
+    behance: "https://www.behance.net/gallery/208285643/Agent-Management-App",
+    published: "September 2024",
+    description:
+      "A structured agent management interface designed to make operational information and workflows easier to navigate.",
+    tech: ["Figma", "Canva", "UI Design", "Information Hierarchy"],
+    image: "/manus-storage/agent-welcome_c3622be8.webp",
+    gallery: [
+      "/manus-storage/agent-welcome_c3622be8.webp",
+      "/manus-storage/agent-profile_84484459.webp",
+    ],
+    highlight: "Business & operational UI · structure · workflow",
+    caseStudy: {
+      overview:
+        "A mobile agent management app designed for Sanlam, published on Behance in September 2024. The product gives agents and their managers a structured interface for navigating operational information — leads, tasks, profiles and notifications — through a clear dashboard-first experience.",
+      roleDesc:
+        "UI/UX & Product Designer — responsible for the interface design, information hierarchy, screen structure and the overall agent management experience.",
+      problem:
+        "Agents work across many touchpoints — leads, follow-ups, manager communication — often spread over disconnected tools. The design challenge was to organize this operational information into one calm, structured interface that keeps daily work moving.",
+      process: [
+        "Established a dashboard-first information hierarchy so assigned work is visible immediately.",
+        "Designed a consistent bottom navigation — Dashboard, Leads, Notifications, Profile — for fast switching.",
+        "Structured lead and profile screens around scannable lists with clear metadata (location, timestamps, contact details).",
+        "Built a welcome and onboarding flow that sets expectations before the agent reaches the dashboard.",
+      ],
+      design:
+        "A light, professional interface with blue accent color, rounded cards and a disciplined typographic hierarchy. KPI cards (Assigned Leads / Completed Leads) sit above a recently-assigned leads list, while the profile section keeps personal and contact information organized. Screens follow a consistent spacing and component rhythm across Dashboard, Leads, Notifications and Profile.",
+      outcome:
+        "A structured operational interface published on Behance, demonstrating how management-systems UI can turn busy agent workflows into an organized daily experience.",
+      reflection:
+        "Operational UI rewarded restraint — the screens work because information is organized first and styled second. Designing for agents reminded me that clarity in a management tool is measured by how quickly someone can find the next thing they need to do.",
+    },
+  },
+{
+    slug: "mobile-pos-interface",
+    title: "A Mobile POS Interface",
+    category: "Mobile UI/UX Design",
+    year: "Sanlam",
+    role: "UI/UX Designer",
+    behance: "https://www.behance.net/gallery/206363403/A-Mobile-POS-Interface",
+    published: "August 2024",
+    description:
+      "A mobile point-of-sale interface exploring a clean and intuitive experience for transactional workflows.",
+    tech: ["Figma", "Mobile UI", "Interaction Design"],
+    image: "/manus-storage/mpos-payment_e49f4328.webp",
+    gallery: [
+      "/manus-storage/mpos-payment_e49f4328.webp",
+      "/manus-storage/mpos-connect_9ace4053.webp",
+      "/manus-storage/mpos-scan_877049a5.webp",
+    ],
+    highlight: "Mobile-first · transactional flow · touch-friendly clarity",
+    caseStudy: {
+      overview:
+        "A mobile POS interface designed for Sanlam, published on Behance in August 2024. The app walks an agent through connecting a Bluetooth POS device, capturing a policy number, processing payment and confirming — a four-step transactional flow on the phone.",
+      roleDesc:
+        "UI/UX Designer — responsible for the mobile interface design, the transactional flow, interaction design and touch-friendly screen layouts.",
+      problem:
+        "Field transactions have to be fast, accurate and reassuring. A POS experience that buries steps or confuses status leaves agents and customers waiting. The challenge was a transactional flow that stays legible at every step, on a small screen.",
+      process: [
+        "Defined the transactional sequence: Connect → Policy number → Payment → Confirm, shown as a progress indicator.",
+        "Designed the connection step around a single primary action (Scan) with clear instructional copy.",
+        "Provided immediate device-feedback — connection status shown plainly on the connected screen.",
+        "Anchored the flow with a branded welcome screen and a bottom navigation for Home, Transactions and Settings.",
+      ],
+      design:
+        "A dark, focused interface with blue primary actions and a calm visual temperature suited to repeated daily use. A step progress bar keeps the agent oriented, device status is communicated with plain text and color, and every screen offers exactly one primary action. Branding and a device photograph on the welcome screen give the product a tangible, real-world feel.",
+      outcome:
+        "A clean transactional mobile experience published on Behance, showing how a payment workflow can be reduced to an intuitive four-step journey.",
+      reflection:
+        "Transactional UI taught me that confidence is a design outcome — when a screen always tells you where you are and what happens next, the flow feels trustworthy. Speed and clarity turned out to be the same decision.",
+    },
+  },
+{
+    slug: "sanlam-gi-buy-insurance",
+    title: "GI Buy Insurance Website",
+    category: "Insurance Digital Products",
+    year: "Sanlam",
+    role: "UI/UX Designer",
+    description:
+      "Designing the digital journey that takes a visitor from first glance to a completed insurance purchase — clarity, trust and a responsive experience at every step.",
+    tech: ["Figma", "UX Research", "Responsive Design", "Prototyping"],
+    image: "/manus-storage/gi-website-full_51ff9683.webp",
+    gallery: [
+      "/manus-storage/gi-website-full_51ff9683.webp",
+    ],
+    highlight: "Insurance purchase journey · product thinking · responsive experience",
+    caseStudy: {
+      overview:
+        "A digital product for Sanlam focused on letting people research and buy insurance online. The website brings the purchase journey to the web, where users can understand products, compare options and complete applications.",
+      problem:
+        "Buying insurance traditionally involves long forms, jargon and uncertainty. The challenge was to make the entire purchase journey feel clear, trustworthy and achievable on any device.",
+      roleDesc:
+        "UI/UX Designer — responsible for the user experience design of the purchase journey, interface design, responsive layouts and product thinking.",
+      process: [
+        "Mapped the end-to-end insurance purchase journey and identified friction points.",
+        "Defined information architecture so product details are easy to find and compare.",
+        "Designed responsive interfaces and interactive prototypes in Figma.",
+        "Iterated layouts around clarity, trust signals and form simplicity.",
+      ],
+      design:
+        "A clean, content-led interface with a clear step-by-step purchase flow, product cards that compare plans at a glance, and a responsive layout that works from phone to desktop.",
+      outcome:
+        "A coherent digital purchase experience that connects product thinking with interface craft across the full funnel.",
+      reflection:
+        "Insurance UX taught me that clarity is a design feature — when complex products are explained simply, trust follows.",
+    },
+  },
+{
+    slug: "bancassurance-mobile-app",
+    title: "BancAssurance Mobile App",
+    category: "Insurance Digital Products",
+    year: "Sanlam",
+    role: "UI/UX Designer",
+    description:
+      "A mobile experience for bank agents and customers, shaped around real workflows, information architecture and flows that feel effortless in the hand.",
+    tech: ["Figma", "User Flows", "Information Architecture", "Mobile UX"],
+    image: "/manus-storage/bancassurance-agent-dashboard_2814b4d6.webp",
+    gallery: [
+      "/manus-storage/bancassurance-agent-dashboard_2814b4d6.webp",
+    ],
+    highlight: "Mobile UX · agent workflows · user flows",
+    caseStudy: {
+      overview:
+        "A mobile application supporting bancassurance — the distribution of insurance products through banking channels — designed around the daily work of agents and the needs of customers.",
+      problem:
+        "Agents needed a tool that fit their real workflows rather than forcing them to adapt to the software. Complexity had to be structured so daily tasks stay fast.",
+      roleDesc:
+        "UI/UX Designer — responsible for mobile UX, agent workflows, information architecture, user flows and interface design.",
+      process: [
+        "Studied how agents actually work in the field and documented their key workflows.",
+        "Built the information architecture around those workflows instead of product categories.",
+        "Mapped user flows for the most common tasks and designed them for speed.",
+        "Prototyped and refined the interface for legibility and ease of use on small screens.",
+      ],
+      design:
+        "A task-first mobile interface with clear navigation, workflow-driven screens and a visual language that keeps dense information scannable.",
+      outcome:
+        "A mobile product whose structure mirrors how agents work, reducing the distance between opening the app and completing a task.",
+      reflection:
+        "Good mobile UX starts with the workflow, not the screen — when information architecture follows real behaviour, the interface almost designs itself.",
+    },
+  },
+{
     slug: "cgsul-website-redesign",
     title: "CGSUL Website Redesign",
     category: "WordPress / Web Development",
@@ -222,7 +301,7 @@ export const PROJECTS: Project[] = [
         "Real-world builds teach you that design decisions, development and hosting all belong to the same project — mastery is connecting them well.",
     },
   },
-  {
+{
     slug: "wordpress-development",
     title: "WordPress Development",
     category: "WordPress / Web Development",
@@ -253,7 +332,7 @@ export const PROJECTS: Project[] = [
       reflection:
         "Maintenance is where professionalism shows — a website is only as good as it is six months after launch.",
     },
-  },
+  }
 ];
 
 /* ------------------------------------------------------------------ */

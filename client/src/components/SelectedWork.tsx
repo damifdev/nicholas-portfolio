@@ -129,7 +129,10 @@ function CaseStudyDialog({
       <div
         className="relative w-full max-w-3xl bg-[#171614] border border-border"
         onClick={(e) => e.stopPropagation()}>
-        <img src={project.image} alt={project.title} className="aspect-[16/9] w-full object-cover" />
+        <img
+          src={project.image}
+          alt={project.title}
+          className="aspect-[16/9] w-full max-h-[46vh] object-cover md:object-contain md:bg-[#0a0909]" />
         {project.gallery && project.gallery.length > 1 && (
           <div className="flex gap-2 overflow-x-auto border-b border-border bg-[#0a0909] p-3">
             {project.gallery.map((g, i) => (
@@ -161,12 +164,24 @@ function CaseStudyDialog({
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
             <span className="micro-label text-[var(--ember)]">{project.category}</span>
             <span className="text-muted-foreground">{project.role}</span>
+            {project.published && (
+              <span className="text-muted-foreground">Published {project.published}</span>
+            )}
           </div>
+          {project.behance && (
+            <a
+              href={project.behance}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-1.5 font-mono text-[11px] tracking-widest text-foreground/70 underline-offset-4 transition-colors hover:text-[var(--ember)] hover:underline">
+              VIEW ON BEHANCE <ArrowUpRight className="h-3 w-3" />
+            </a>
+          )}
 
           <dl className="mt-8 space-y-6">
             {([
               ["Overview", project.caseStudy.overview],
-              ["Problem", project.caseStudy.problem],
+              ["Design Challenge", project.caseStudy.problem],
               ["Role", project.caseStudy.roleDesc],
               ["Design", project.caseStudy.design],
               ["Outcome", project.caseStudy.outcome],
