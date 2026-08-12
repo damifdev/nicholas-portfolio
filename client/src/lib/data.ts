@@ -617,7 +617,10 @@ export const LEARNING_TOPICS = [
 export const CERTIFICATIONS = {
   completed: [
     { name: "Google UX Design Professional Certificate", status: "completed" as const },
-    { name: "Cybersecurity Training — HiiT Plc", status: "completed" as const },
+    { name: "CompTIA Security+ — HiiT Plc", status: "completed" as const },
+    { name: "Cisco Certified Network Associate (CCNA) — HiiT Plc", status: "completed" as const },
+    { name: "Certified Ethical Hacker (CEH) — HiiT Plc", status: "completed" as const },
+    { name: "Python Programming with AI Tools — HiiT Plc", status: "completed" as const },
   ],
   inProgress: [
     { name: "CompTIA Security+ — Professional Certification", status: "learning" as const },
