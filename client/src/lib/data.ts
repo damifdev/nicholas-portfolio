@@ -7,7 +7,7 @@
 
 export const ASSETS = {
   monogram: "/manus-storage/osa-monogram_a2054be2.webp",
-  portrait: "/manus-storage/portrait-real_edfda21a.webp",
+  portrait: "/manus-storage/hero-portrait-dark_696c199f.webp",
   portrait2: "/manus-storage/portrait-real-2_45f9f0c1.webp",
   heroTexture: "/manus-storage/hero-texture_9b2bfce5.webp",
   divider: "/manus-storage/section-divider_12b73b02.png",
