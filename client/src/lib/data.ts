@@ -72,6 +72,13 @@ export interface Project {
   highlight?: string;
   behance?: string;
   published?: string;
+  /** External live demo URL (renders a "View Live Project" link). */
+  liveUrl?: string;
+  /** External source repository URL. */
+  sourceUrl?: string;
+  /** Optional rich case-study page route (e.g. /project/jigsaw). When set, the
+   *  case-study dialog deep-links here instead of opening a modal. */
+  caseStudyPath?: string;
   caseStudy: {
     overview: string;
     problem: string;
@@ -200,38 +207,46 @@ export const PROJECTS: Project[
     },
   },
 {
-    slug: "sanlam-gi-buy-insurance",
-    title: "GI Buy Insurance Website",
-    category: "Insurance Digital Products",
-    year: "Sanlam",
-    role: "UI/UX Designer",
+    slug: "jigsaw-puzzle-game",
+    title: "Jigsaw",
+    category: "Game Design · UI/UX · Interaction Design",
+    year: "Frontend Development",
+    role: "Designer & Developer",
     description:
-      "Designing the digital journey that takes a visitor from first glance to a completed insurance purchase — clarity, trust and a responsive experience at every step.",
-    tech: ["Figma", "UX Research", "Responsive Design", "Prototyping"],
-    image: "/manus-storage/gi-website-full_51ff9683.webp",
+      "A modern, immersive jigsaw puzzle experience designed around intuitive interactions, visual clarity, progression, and seamless gameplay — designed and built as a fully playable web app.",
+    tech: ["React 19", "TypeScript", "Tailwind CSS", "Web Audio", "Drag & Drop", "Responsive Design"],
+    image: "/manus-storage/jigsaw-gameplay_initial_207b45ce.webp",
     gallery: [
-      "/manus-storage/gi-website-full_51ff9683.webp",
+      "/manus-storage/jigsaw-puzzle_chooser_2161043e.webp",
+      "/manus-storage/jigsaw-gameplay_initial_207b45ce.webp",
+      "/manus-storage/jigsaw-gameplay_progress_3cd51132.webp",
+      "/manus-storage/jigsaw-gameplay_complete_8e332a14.webp",
+      "/manus-storage/jigsaw-settings_modal_c75eb1b2.webp",
     ],
-    highlight: "Insurance purchase journey · product thinking · responsive experience",
+    highlight: "Interactive game design · drag-and-drop craft · accessible interaction",
+    liveUrl: "https://jigsawgame-jqutmfne.manus.space",
+    sourceUrl: "https://github.com/damifdev/jigsaw-puzzle-game",
+    caseStudyPath: "/project/jigsaw",
     caseStudy: {
       overview:
-        "A digital product for Sanlam focused on letting people research and buy insurance online. The website brings the purchase journey to the web, where users can understand products, compare options and complete applications.",
+        "A fully playable digital puzzle table that recreates the quiet satisfaction of assembling a physical jigsaw — with four built-in artworks, four difficulty levels, custom image uploads, undo/redo history and a warm editorial interface.",
       problem:
-        "Buying insurance traditionally involves long forms, jargon and uncertainty. The challenge was to make the entire purchase journey feel clear, trustworthy and achievable on any device.",
+        "Digital jigsaw interfaces often let pieces, controls, timers, progress indicators and settings compete for attention. The challenge was to keep the puzzle itself visually dominant while giving the player clear feedback and effortless control.",
       roleDesc:
-        "UI/UX Designer — responsible for the user experience design of the purchase journey, interface design, responsive layouts and product thinking.",
+        "Designer & Developer — responsible for the interaction design, visual system, game logic and full frontend implementation as a client-side web application.",
       process: [
-        "Mapped the end-to-end insurance purchase journey and identified friction points.",
-        "Defined information architecture so product details are easy to find and compare.",
-        "Designed responsive interfaces and interactive prototypes in Figma.",
-        "Iterated layouts around clarity, trust signals and form simplicity.",
+        "Studied the tactile language of physical jigsaw puzzles — sorting, rotating, snapping, grouping.",
+        "Defined interaction principles: puzzle-first interface, minimal distractions, strong visual feedback.",
+        "Built the piece engine: drag-and-drop placement, snap-to-place feedback, rotation, undo/redo history.",
+        "Layered progression and challenge: difficulties, optional timer, hints and a polished completion state.",
+        "Refined the responsive experience for desktop, tablet and touch input, with reduced-motion and screen-reader support.",
       ],
       design:
-        "A clean, content-led interface with a clear step-by-step purchase flow, product cards that compare plans at a glance, and a responsive layout that works from phone to desktop.",
+        "A 'Hearth & Paper' editorial workspace: warm cream board, ink typography, saffron accents, ruled hairlines. The board stays the hero while the tray, toolbar and progress read as quiet supporting instruments.",
       outcome:
-        "A coherent digital purchase experience that connects product thinking with interface craft across the full funnel.",
+        "A familiar physical puzzle activity, transformed into a clean, interactive digital experience where intuitive interaction, visual feedback and seamless gameplay lead the way.",
       reflection:
-        "Insurance UX taught me that clarity is a design feature — when complex products are explained simply, trust follows.",
+        "Game UI taught me that feedback is the product — a snap tone, a highlight, a satisfying settle. Small states, executed consistently, are what make an interaction feel real.",
     },
   },
 {
@@ -376,7 +391,7 @@ export const EXPERIENCE: ExperienceEntry[] = [
     framing:
       "Digital product design for insurance — mobile applications, web interfaces, user research, prototyping and design systems.",
     points: [
-      "Designed digital products including the GI Buy Insurance website and mobile applications.",
+      "Designed digital products including the Sanlam insurance purchase website and mobile applications.",
       "Conducted user research and built user flows, wireframes and prototypes.",
       "Developed interface design and contributed to design systems.",
       "Collaborated across product, design and business teams to ship usable experiences.",

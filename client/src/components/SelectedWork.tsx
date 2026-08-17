@@ -57,10 +57,23 @@ function ProjectCard({
         setMouse({ x: (e.clientX - r.left) / r.width, y: (e.clientY - r.top) / r.height });
       }}
       style={{ ["--reveal-delay" as string]: variant === "large" ? "0ms" : "120ms" }}>
-      <button
+      <a
         data-cursor="magnet"
         data-cursor-project
-        onClick={() => onOpen(project)}
+        href={project.caseStudyPath ?? project.liveUrl ?? undefined}
+        onClick={(e) => {
+          if (!project.caseStudyPath && !project.liveUrl) {
+            e.preventDefault();
+            onOpen(project);
+            return;
+          }
+          if (project.caseStudyPath) {
+            e.preventDefault();
+            window.location.href = project.caseStudyPath;
+          }
+        }}
+        target={project.liveUrl ? "_blank" : undefined}
+        rel={project.liveUrl ? "noopener noreferrer" : undefined}
         className="block w-full text-left"
         aria-label={`View case study: ${project.title}`}>
         {/* Preview */}
@@ -105,7 +118,7 @@ function ProjectCard({
             </span>
           ))}
         </div>
-      </button>
+      </a>
     </article>
   );
 }
