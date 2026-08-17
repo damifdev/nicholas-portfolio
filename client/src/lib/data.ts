@@ -134,6 +134,41 @@ export const PROJECTS: Project[
     },
   },
 {
+    slug: "sanlam-gi-buy-insurance",
+    title: "GI Buy Insurance Website",
+    readingTime: 2,
+    caseStudyPath: "/project/sanlam-gi-buy-insurance",
+    category: "Insurance Digital Products",
+    year: "Sanlam",
+    role: "UI/UX Designer",
+    description:
+      "Designing the digital journey that takes a visitor from first glance to a completed insurance purchase — clarity, trust and a responsive experience at every step.",
+    tech: ["Figma", "UX Research", "Responsive Design", "Prototyping"],
+    image: "/manus-storage/gi-website-full_51ff9683.webp",
+    gallery: ["/manus-storage/gi-website-full_51ff9683.webp"],
+    highlight: "Insurance purchase journey · product thinking · responsive experience",
+    caseStudy: {
+      overview:
+        "A digital product for Sanlam focused on letting people research and buy insurance online. The website brings the purchase journey to the web, where users can understand products, compare options and complete applications.",
+      problem:
+        "Buying insurance traditionally involves long forms, jargon and uncertainty. The challenge was to make the entire purchase journey feel clear, trustworthy and achievable on any device.",
+      roleDesc:
+        "UI/UX Designer — responsible for the user experience design of the purchase journey, interface design, responsive layouts and product thinking.",
+      process: [
+        "Mapped the end-to-end insurance purchase journey and identified friction points.",
+        "Defined information architecture so product details are easy to find and compare.",
+        "Designed responsive interfaces and interactive prototypes in Figma.",
+        "Iterated layouts around clarity, trust signals and form simplicity.",
+      ],
+      design:
+        "A clean, content-led interface with a clear step-by-step purchase flow, product cards that compare plans at a glance, and a responsive layout that works from phone to desktop.",
+      outcome:
+        "A coherent digital purchase experience that connects product thinking with interface craft across the full funnel.",
+      reflection:
+        "Insurance UX taught me that clarity is a design feature — when complex products are explained simply, trust follows.",
+    },
+  },
+{
     slug: "agent-management-app",
     title: "Agent Management App",
     readingTime: 2,
