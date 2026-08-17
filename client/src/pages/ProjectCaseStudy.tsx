@@ -7,7 +7,7 @@
  * Route: /project/:slug
  */
 import { useEffect, useMemo } from "react";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Clock } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { PROJECTS, type Project } from "@/lib/data";
 import { useReveal } from "@/hooks/useReveal";
@@ -41,6 +41,9 @@ export default function ProjectCaseStudy() {
   if (!project) return <NotFound />;
 
   const heroImage = project.gallery && project.gallery.length > 0 ? project.gallery[0] : project.image;
+  const currentIndex = PROJECTS.findIndex((p) => p.slug === project.slug);
+  const prevProject = currentIndex > 0 ? PROJECTS[currentIndex - 1] : null;
+  const nextProject = currentIndex >= 0 && currentIndex < PROJECTS.length - 1 ? PROJECTS[currentIndex + 1] : null;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -63,9 +66,15 @@ export default function ProjectCaseStudy() {
             </Link>
 
             <div className="reveal reveal-clip" style={{ ["--reveal-delay" as string]: "60ms" }}>
-              <p className="micro-label mb-5 text-[var(--ember)]">
-                {project.category.toUpperCase()}
-              </p>
+              <div className="mb-5 flex flex-wrap items-center gap-3">
+                <span className="micro-label text-[var(--ember)]">{project.category.toUpperCase()}</span>
+                {project.readingTime && (
+                  <span className="inline-flex items-center gap-1.5 border border-border px-3 py-1.5 font-mono text-[10px] tracking-[0.18em] text-muted-foreground">
+                    <Clock className="h-3 w-3 text-[var(--ember)]" />
+                    {project.readingTime} MIN READ
+                  </span>
+                )}
+              </div>
               <h1 className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight md:text-7xl">
                 {project.title}
               </h1>
@@ -305,7 +314,7 @@ export default function ProjectCaseStudy() {
           </div>
         </section>
 
-        {/* ============ NEXT PROJECT NAV ============ */}
+        {/* ============ PREV / NEXT PROJECT NAV ============ */}
         <section className="border-t border-border bg-[#11100e] py-16 md:py-20">
           <div className="container">
             <div className="reveal flex flex-wrap items-center justify-between gap-6">
@@ -319,6 +328,32 @@ export default function ProjectCaseStudy() {
                 <ArrowLeft className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-x-1" />
                 VIEW ALL WORK
               </Link>
+              <div className="flex flex-wrap items-center gap-3">
+                {prevProject ? (
+                  <Link
+                    href={prevProject.caseStudyPath ?? ""}
+                    className="group flex flex-col items-start border border-border px-5 py-3 transition-colors duration-300 hover:border-[var(--ember)]">
+                    <span className="micro-label mb-1 font-mono text-[9px] tracking-[0.22em] text-muted-foreground">
+                      ← PREVIOUS PROJECT
+                    </span>
+                    <span className="font-display text-lg tracking-tight transition-colors duration-300 group-hover:text-[var(--ember)]">
+                      {prevProject.title}
+                    </span>
+                  </Link>
+                ) : null}
+                {nextProject ? (
+                  <Link
+                    href={nextProject.caseStudyPath ?? ""}
+                    className="group flex flex-col items-end border border-border px-5 py-3 transition-colors duration-300 hover:border-[var(--ember)]">
+                    <span className="micro-label mb-1 font-mono text-[9px] tracking-[0.22em] text-muted-foreground">
+                      NEXT PROJECT →
+                    </span>
+                    <span className="font-display text-lg tracking-tight transition-colors duration-300 group-hover:text-[var(--ember)]">
+                      {nextProject.title}
+                    </span>
+                  </Link>
+                ) : null}
+              </div>
               {project.liveUrl && (
                 <a
                   href={project.liveUrl}

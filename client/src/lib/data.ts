@@ -79,6 +79,8 @@ export interface Project {
   /** Optional rich case-study page route (e.g. /project/jigsaw). When set, the
    *  case-study dialog deep-links here instead of opening a modal. */
   caseStudyPath?: string;
+  /** Reading-time badge in minutes for the case-study page. */
+  readingTime?: number;
   caseStudy: {
     overview: string;
     problem: string;
@@ -94,6 +96,7 @@ export const PROJECTS: Project[
 ] = [{
     slug: "asset-management",
     title: "Asset Management",
+    readingTime: 2,
     caseStudyPath: "/project/asset-management",
     category: "Product Design / UI/UX",
     year: "Sanlam",
@@ -133,6 +136,7 @@ export const PROJECTS: Project[
 {
     slug: "agent-management-app",
     title: "Agent Management App",
+    readingTime: 2,
     caseStudyPath: "/project/agent-management-app",
     category: "UI/UX Design",
     year: "Sanlam",
@@ -172,6 +176,7 @@ export const PROJECTS: Project[
 {
     slug: "mobile-pos-interface",
     title: "A Mobile POS Interface",
+    readingTime: 2,
     caseStudyPath: "/project/mobile-pos-interface",
     category: "Mobile UI/UX Design",
     year: "Sanlam",
@@ -211,7 +216,8 @@ export const PROJECTS: Project[
   },
 {
     slug: "jigsaw-puzzle-game",
-    title: "Jigsaw",
+    title: "Jigsaw Game Development",
+    readingTime: 4,
     category: "Game Design · UI/UX · Interaction Design",
     year: "Frontend Development",
     role: "Designer & Developer",
@@ -255,6 +261,7 @@ export const PROJECTS: Project[
 {
     slug: "bancassurance-mobile-app",
     title: "BancAssurance Mobile App",
+    readingTime: 2,
     caseStudyPath: "/project/bancassurance-mobile-app",
     category: "Insurance Digital Products",
     year: "Sanlam",
@@ -288,72 +295,6 @@ export const PROJECTS: Project[
         "Good mobile UX starts with the workflow, not the screen — when information architecture follows real behaviour, the interface almost designs itself.",
     },
   },
-{
-    slug: "cgsul-website-redesign",
-    title: "CGSUL Website Redesign",
-    caseStudyPath: "/project/cgsul-website-redesign",
-    category: "WordPress / Web Development",
-    year: "Freelance",
-    role: "WordPress Developer",
-    description:
-      "A full website redesign and rebuild — from an outdated web presence to a modern, responsive site built with WordPress, Elementor and custom front-end craft.",
-    tech: ["WordPress", "Elementor", "Astra", "HappyAddons", "HTML", "CSS", "JavaScript"],
-    image: "/manus-storage/project-cgsul_d614551d.webp",
-    highlight: "Before/after redesign · responsive layouts · migration & hosting",
-    caseStudy: {
-      overview:
-        "A complete redesign and development of the CGSUL website, transforming an outdated web presence into a modern, responsive WordPress site.",
-      problem:
-        "The existing site no longer represented the organisation — dated design, poor mobile experience and content that was difficult to maintain.",
-      roleDesc:
-        "WordPress Developer — led the redesign and development, from visual design decisions through build, migration and hosting.",
-      process: [
-        "Audited the existing site and defined redesign goals for design and usability.",
-        "Designed a new visual direction and responsive layouts.",
-        "Built the site with WordPress, Elementor, Astra and HappyAddons, plus custom HTML, CSS and JavaScript.",
-        "Managed migration and hosting challenges to get the new site live reliably.",
-      ],
-      design:
-        "A cleaner, editorial layout system with responsive grids, improved typography and components that the team can maintain in WordPress without touching code.",
-      outcome:
-        "A modern, responsive website that reflects the organisation properly and is far easier to maintain day-to-day.",
-      reflection:
-        "Real-world builds teach you that design decisions, development and hosting all belong to the same project — mastery is connecting them well.",
-    },
-  },
-{
-    slug: "wordpress-development",
-    title: "WordPress Development",
-    caseStudyPath: "/project/wordpress-development",
-    category: "WordPress / Web Development",
-    year: "1999 Ideas",
-    role: "WordPress Developer",
-    description:
-        "Building and maintaining WordPress websites as a professional role — Elementor implementations, responsive front-end development, AI-assisted workflows and ongoing site stewardship.",
-    tech: ["WordPress", "Elementor", "HTML", "CSS", "JavaScript", "AI-Assisted Development"],
-    image: "/manus-storage/project-1999ideas_49011381.webp",
-    highlight: "WordPress development · responsive design · site maintenance",
-    caseStudy: {
-      overview:
-        "Professional WordPress development work at 1999 Ideas — implementing designs, building responsive websites, exploring AI-assisted development workflows and maintaining live web properties.",
-      problem:
-        "Clients need websites that look designed, perform well on every device, and keep working reliably long after launch.",
-      roleDesc:
-        "WordPress Developer — responsible for WordPress development, website implementation, responsive design, Elementor work, UI implementation, frontend development and maintenance.",
-      process: [
-        "Translated design files into working WordPress sites using Elementor and custom code where needed.",
-        "Implemented responsive layouts so every page works on phone, tablet and desktop.",
-        "Built UI components and interactions that match the intended design.",
-        "Maintained live sites — updates, fixes and continuous improvement.",
-      ],
-      design:
-        "Pixel-conscious implementation of designed interfaces, with responsive behaviour treated as a first-class design requirement rather than an afterthought.",
-      outcome:
-        "Reliably built, responsive WordPress websites delivered for clients and maintained over time.",
-      reflection:
-        "Maintenance is where professionalism shows — a website is only as good as it is six months after launch.",
-    },
-  }
 ];
 
 /* ------------------------------------------------------------------ */

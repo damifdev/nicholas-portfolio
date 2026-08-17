@@ -111,9 +111,13 @@ export default function JigsawCaseStudy() {
             </Link>
 
             <div className="reveal reveal-clip" style={{ ["--reveal-delay" as string]: "60ms" }}>
-              <p className="micro-label mb-5 text-[var(--ember)]">
-                GAME DESIGN · UI/UX · INTERACTION DESIGN · FRONTEND DEVELOPMENT
-              </p>
+              <div className="mb-5 flex flex-wrap items-center gap-3">
+                <span className="micro-label text-[var(--ember)]">GAME DESIGN · UI/UX · INTERACTION DESIGN · FRONTEND DEVELOPMENT</span>
+                <span className="inline-flex items-center gap-1.5 border border-border px-3 py-1.5 font-mono text-[10px] tracking-[0.18em] text-muted-foreground">
+                  <Clock className="h-3 w-3 text-[var(--ember)]" />
+                  4 MIN READ
+                </span>
+              </div>
               <h1 className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight md:text-7xl">
                 Jigsaw
               </h1>
@@ -756,6 +760,34 @@ export default function JigsawCaseStudy() {
                 VIEW SOURCE
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ NEXT PROJECT NAV ============ */}
+        <section className="border-t border-border bg-[#11100e] py-16 md:py-20">
+          <div className="container">
+            <div className="reveal flex flex-wrap items-center justify-between gap-6">
+              <Link
+                href="/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = `/#work`;
+                }}
+                className="group inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.22em] text-foreground/60 transition-colors duration-300 hover:text-[var(--ember)]">
+                <ArrowLeft className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-x-1" />
+                VIEW ALL WORK
+              </Link>
+              <Link
+                href="/project/agent-management-app"
+                className="group flex flex-col items-end border border-border px-5 py-3 transition-colors duration-300 hover:border-[var(--ember)]">
+                <span className="micro-label mb-1 font-mono text-[9px] tracking-[0.22em] text-muted-foreground">
+                  NEXT PROJECT →
+                </span>
+                <span className="font-display text-lg tracking-tight transition-colors duration-300 group-hover:text-[var(--ember)]">
+                  Agent Management App
+                </span>
+              </Link>
             </div>
           </div>
         </section>
