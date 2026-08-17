@@ -94,6 +94,7 @@ export const PROJECTS: Project[
 ] = [{
     slug: "asset-management",
     title: "Asset Management",
+    caseStudyPath: "/project/asset-management",
     category: "Product Design / UI/UX",
     year: "Sanlam",
     role: "UI/UX & Product Designer",
@@ -132,6 +133,7 @@ export const PROJECTS: Project[
 {
     slug: "agent-management-app",
     title: "Agent Management App",
+    caseStudyPath: "/project/agent-management-app",
     category: "UI/UX Design",
     year: "Sanlam",
     role: "UI/UX & Product Designer",
@@ -170,6 +172,7 @@ export const PROJECTS: Project[
 {
     slug: "mobile-pos-interface",
     title: "A Mobile POS Interface",
+    caseStudyPath: "/project/mobile-pos-interface",
     category: "Mobile UI/UX Design",
     year: "Sanlam",
     role: "UI/UX Designer",
@@ -252,6 +255,7 @@ export const PROJECTS: Project[
 {
     slug: "bancassurance-mobile-app",
     title: "BancAssurance Mobile App",
+    caseStudyPath: "/project/bancassurance-mobile-app",
     category: "Insurance Digital Products",
     year: "Sanlam",
     role: "UI/UX Designer",
@@ -287,6 +291,7 @@ export const PROJECTS: Project[
 {
     slug: "cgsul-website-redesign",
     title: "CGSUL Website Redesign",
+    caseStudyPath: "/project/cgsul-website-redesign",
     category: "WordPress / Web Development",
     year: "Freelance",
     role: "WordPress Developer",
@@ -319,6 +324,7 @@ export const PROJECTS: Project[
 {
     slug: "wordpress-development",
     title: "WordPress Development",
+    caseStudyPath: "/project/wordpress-development",
     category: "WordPress / Web Development",
     year: "1999 Ideas",
     role: "WordPress Developer",
