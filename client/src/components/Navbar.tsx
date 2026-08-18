@@ -3,7 +3,7 @@
  * on scroll. Numbered micro-labels, magnetic "Let's Talk" CTA, elegant mobile
  * menu with full-height curtain.
  */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ASSETS, NAV_LINKS } from "@/lib/data";
 
 export default function Navbar() {
@@ -24,10 +24,45 @@ export default function Navbar() {
     };
   }, [open]);
 
+  // Deep-link anchor (e.g. /project/chess-game#contact) — scroll after mount
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      const t = setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "instant" as ScrollBehavior });
+      }, 150);
+      return () => clearTimeout(t);
+    }
+  }, []);
+
+  // When a nav link is clicked from a project case-study page, the target
+  // section lives on the home page, so navigate there and scroll to the
+  // section after it mounts.
+  const pendingScroll = useRef<string | null>(null);
+
+  useEffect(() => {
+    const id = pendingScroll.current;
+    if (id) {
+      pendingScroll.current = null;
+      // allow the home page to mount and restore scroll position
+      const t = setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "instant" as ScrollBehavior });
+      }, 120);
+      return () => clearTimeout(t);
+    }
+  });
+
   const goTo = (href: string) => {
     setOpen(false);
     const id = href.replace("#", "");
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+    // Target lives on the home page (e.g. from a case-study route)
+    pendingScroll.current = id;
+    window.location.href = `/#${id}`;
   };
 
   return (
