@@ -60,25 +60,39 @@ function Kicker({ n, label }: { n: string; label: string }) {
 }
 
 function CTAButtons() {
+  // Ink & Ember — ember slides in from the left edge of the primary button on
+  // hover (door-swing fill), secondary button lights its top hairline and
+  // glows softly; arrows drift with a snappy ease-out, presses scale 0.97.
   const btn =
-    "group inline-flex items-center gap-2 border px-7 py-3.5 font-mono text-[11px] tracking-[0.22em] transition-all duration-300";
+    "group relative inline-flex items-center gap-2 overflow-hidden border px-7 py-3.5 font-mono text-[11px] tracking-[0.22em] transition-all duration-300 will-change-transform active:scale-[0.97]";
+  const arrow =
+    "relative z-[1] h-3.5 w-3.5 transition-transform duration-[220ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-1 group-hover:-translate-y-1";
+  const shimmer =
+    "pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100";
   return (
     <div className="reveal flex flex-wrap items-center gap-4" style={{ ["--reveal-delay" as string]: "160ms" }}>
       <a
         href={LIVE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${btn} border-[var(--ember)] bg-[var(--ember)] text-[#141311] hover:bg-transparent hover:text-[var(--ember)]`}>
-        VIEW LIVE PROJECT
-        <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+        aria-label="View the live Tournament Ledger chess app"
+        className={`${btn} border-[var(--ember)] bg-[var(--ember)] text-[#141311] hover:text-[var(--ember)] hover:shadow-[0_0_0_1px_var(--ember),0_8px_32px_-8px_var(--ember)]`}>
+        <span className="absolute inset-0 -translate-x-full bg-[#141311] transition-transform duration-[450ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0" />
+        <span className="relative z-[1]">VIEW LIVE PROJECT</span>
+        <ArrowUpRight className={arrow} />
+        <span className={shimmer} />
       </a>
       <a
         href={SOURCE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${btn} border-foreground/40 text-foreground/80 hover:border-[var(--ember)] hover:text-[var(--ember)]`}>
-        VIEW SOURCE
-        <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+        aria-label="View the Tournament Ledger source code on GitHub"
+        className={`${btn} border-foreground/40 text-foreground/80 hover:border-[var(--ember)] hover:text-[var(--ember)]`}
+        style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)" }}>
+        <span className="absolute inset-x-0 top-0 h-[1px] bg-[var(--ember)] scale-x-0 origin-left transition-transform duration-[400ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-x-100" />
+        <span className="relative z-[1]">VIEW SOURCE</span>
+        <ArrowUpRight className={arrow} />
+        <span className={shimmer} />
       </a>
     </div>
   );
@@ -145,12 +159,21 @@ export default function ChessCaseStudy() {
             <div
               className="reveal relative mt-14 overflow-hidden border border-border md:mt-16"
               style={{ ["--reveal-delay" as string]: "180ms" }}>
-              <img
-                src={IMG.gameplay}
-                alt="Tournament Ledger — the chessboard with scorecard, engine evaluation and tactical report beside it"
+              {/* Live gameplay clip — animated hero media, muted & looping */}
+              <video
+                src="/manus-storage/chess_hero_0002023c.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                aria-label="Tournament Ledger — animated gameplay showing an Italian Game opening"
                 className="w-full object-contain bg-[#0a0909]"
               />
             </div>
+            <p className="micro-label reveal mt-3 text-foreground/50" style={{ ["--reveal-delay" as string]: "240ms" }}>
+              Recorded live — an Italian Game opening played on the production app.
+            </p>
           </div>
         </section>
 
