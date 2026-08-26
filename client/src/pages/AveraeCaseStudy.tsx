@@ -165,7 +165,35 @@ export default function AveraeCaseStudy() {
 
         <section className="border-y border-border bg-[#11100e] py-24 md:py-32">
           <div className="container">
-            <Kicker n="04" label="UX Design" />
+            <Kicker n="04" label="UX Decision Map" />
+            <div className="reveal mb-12 grid gap-8 lg:grid-cols-12 lg:gap-16">
+              <h2 className="font-display text-3xl leading-tight tracking-tight md:text-5xl lg:col-span-5">Designing the path from discovery to decision.</h2>
+              <p className="max-w-2xl text-base leading-relaxed text-foreground/80 md:text-lg lg:col-span-7">The important work was not one interface in isolation. It was the set of decisions connecting browsing, product confidence, saved intent, purchase utility and mobile continuity into one marketplace journey.</p>
+            </div>
+            <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                ["01", "Simplified marketplace navigation", "Separate audience, category and editorial entry points so a broad assortment remains understandable."],
+                ["02", "Mega-menu architecture", "Expose Women, Men, Kids, Unisex and product categories without making the header feel overloaded."],
+                ["03", "Advanced product filtering", "Give shoppers practical control over a marketplace assortment through filters, search and sorting."],
+                ["04", "Editorial fashion discovery", "Use trends, African fashion, new arrivals, Editor’s Picks, The Áveraẹ Edit and Shop the Look as routes into commerce."],
+                ["05", "Product-to-checkout journey", "Carry the shopper from product detail, variants and size guidance toward bag and checkout with fewer uncertain steps."],
+                ["06", "Wishlist and shopping bag", "Support considered shopping by keeping saved products and purchase progress visible and available."],
+                ["07", "Responsive mobile experience", "Preserve discovery, product information and essential commerce actions in a touch-first layout."],
+                ["08", "Support after purchase", "Treat delivery, returns, refunds, FAQ, contact support and order tracking as part of the product experience."],
+              ].map(([number, title, text], index) => (
+                <article key={title} className="reveal group bg-background p-6 transition-colors duration-300 hover:bg-[#171614] md:p-7" style={{ ["--reveal-delay" as string]: `${(index % 4) * 60}ms` }}>
+                  <div className="flex items-start justify-between gap-4"><span className="font-mono text-[10px] tracking-[0.2em] text-[var(--ember)]">{number}</span><span className="h-px w-8 bg-border transition-colors duration-300 group-hover:bg-[var(--ember)]" /></div>
+                  <h3 className="mt-10 font-display text-xl leading-tight tracking-tight md:text-2xl">{title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-border bg-[#11100e] py-24 md:py-32">
+          <div className="container">
+            <Kicker n="05" label="UX Design" />
             <div className="reveal mb-14 max-w-3xl"><p className="font-display text-2xl italic leading-snug tracking-tight text-foreground/80 md:text-3xl">The experience is designed as a connected journey — from the first editorial impression to product consideration, purchase utility and post-purchase support.</p></div>
             <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
               {uxAreas.map(([title, text], index) => <article key={title} className="reveal bg-background p-6 md:p-7" style={{ ["--reveal-delay" as string]: `${(index % 3) * 70}ms` }}><span className="micro-label text-[var(--ember)]">0{index + 1}</span><h3 className="mt-8 font-display text-2xl tracking-tight">{title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p></article>)}

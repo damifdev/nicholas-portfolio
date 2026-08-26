@@ -419,15 +419,15 @@ export const PROJECTS: Project[
     year: "2026",
     role: "UI/UX Designer & Developer",
     description:
-      "A premium fashion and lifestyle marketplace that brings editorial discovery, African-inspired identity and practical e-commerce flows into one seamless shopping experience.",
-    tech: ["React", "Express", "Responsive Design", "E-commerce UX"],
+      "An editorial-inspired fashion marketplace combining e-commerce, trend discovery and a seamless shopping experience.",
+    tech: ["UI/UX Design", "E-commerce UX", "Responsive Web Design", "Information Architecture", "Design Systems", "Frontend Development", "Interaction Design", "Product Discovery"],
     image: "/manus-storage/averae-home-desktop_c3e9b056.webp",
     gallery: [
       "/manus-storage/averae-home-desktop_c3e9b056.webp",
       "/manus-storage/averae-shop-desktop_63342222.webp",
       "/manus-storage/averae-product-desktop_fd128306.webp",
     ],
-    highlight: "Editorial fashion commerce · discovery · marketplace flows",
+    highlight: "UI/UX design · e-commerce UX · responsive web design · information architecture · design systems · frontend development · interaction design · product discovery",
     liveUrl: "https://averaeshop-qciqqxdk.manus.space",
     caseStudy: {
       overview:
