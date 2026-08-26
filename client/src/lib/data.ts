@@ -92,8 +92,139 @@ export interface Project {
   };
 }
 
-export const PROJECTS: Project[
-] = [{
+export const PROJECTS: Project[] = [
+{
+    slug: "averae-ecommerce",
+    title: "Áveraẹ",
+    readingTime: 4,
+    caseStudyPath: "/project/averae-ecommerce",
+    category: "Web Design & Development / UI/UX / E-commerce",
+    year: "2026",
+    role: "UI/UX Designer & Developer",
+    description:
+      "An editorial-inspired fashion marketplace combining e-commerce, trend discovery and a seamless shopping experience.",
+    tech: ["UI/UX Design", "E-commerce UX", "Responsive Web Design", "Information Architecture", "Design Systems", "Frontend Development", "Interaction Design", "Product Discovery"],
+    image: "/manus-storage/averae-home-desktop_c3e9b056.webp",
+    gallery: [
+      "/manus-storage/averae-home-desktop_c3e9b056.webp",
+      "/manus-storage/averae-shop-desktop_63342222.webp",
+      "/manus-storage/averae-product-desktop_fd128306.webp",
+    ],
+    highlight: "UI/UX design · e-commerce UX · responsive web design · information architecture · design systems · frontend development · interaction design · product discovery",
+    liveUrl: "https://averaeshop-qciqqxdk.manus.space",
+    caseStudy: {
+      overview:
+        "Áveraẹ is a deployed fashion and lifestyle e-commerce marketplace built around the idea that shopping can feel like entering a considered editorial world. The experience brings clothing, shoes, bags, jewelry, hair, accessories, watches, beauty and lifestyle, and thrift wear into one responsive storefront, with discovery-led content sitting alongside practical shopping tools.",
+      problem:
+        "Fashion marketplaces can become crowded catalogs where discovery, product information and purchase actions compete for attention. Áveraẹ needed to make a broad multi-category assortment feel curated while still giving shoppers the tools they expect: search, filters, sorting, product detail pages, wishlists, a shopping bag and a clear route to checkout.",
+      roleDesc:
+        "UI/UX Designer & Developer — responsible for the visual and interaction direction of the storefront, the discovery and shopping experience, and the deployed frontend implementation. The live site exposes a React bundle and an Express-powered response header; no additional framework is claimed beyond what is detectable from the deployment.",
+      process: [
+        "Structured the marketplace around two complementary paths: shop by audience (Women, Men, Kids and Unisex) and shop by product category.",
+        "Connected editorial discovery to commerce through Trending now, New arrivals, The Áveraẹ Edit, Cultural Spotlight, Style Guide, Shop the Look and Editor's Picks modules.",
+        "Designed the shop experience around 18 visible products with audience/category filters, product search, filter controls, sorting and product-card actions such as wishlist, Quick View, Select Options and Quick Add.",
+        "Made product detail pages carry the decision-making load with image galleries, zoom, color and size selection, size guidance, market-specific sizing, delivery information, returns and product details.",
+        "Extended the experience to responsive shopping journeys and utility destinations including account, orders, wishlist, bag, delivery, returns, size guide, FAQs and contact support.",
+      ],
+      design:
+        "The live storefront uses a warm editorial fashion language: ivory surfaces, dark brown typography, large serif headlines, hairline dividers, restrained utility icons and warm architectural photography. Its African-inspired identity comes through as a point of view rather than a decorative layer — rooted references, modern proportions and a marketplace structure that stays practical.",
+      outcome:
+        "A live, responsive fashion marketplace that joins editorial storytelling with observable shopping functionality: category and audience discovery, trend-led merchandising, product search, filtering, sorting, wishlists, bag actions, product detail and size guidance, plus delivery, returns and support information.",
+      reflection:
+        "Áveraẹ demonstrates how a marketplace can hold breadth without feeling anonymous. The strongest experience comes from treating discovery and utility as one system: editorial modules create direction, while filters, product details and purchase actions help the shopper act on it.",
+    },
+  },
+{
+    slug: "chess-game",
+    title: "Tournament Ledger",
+    readingTime: 6,
+    caseStudyPath: "/project/chess-game",
+    category: "Game Design / Development",
+    year: "2026",
+    role: "Designer & Developer",
+    description:
+      "A fully playable browser chess game — a complete TypeScript chess engine, an explorable AI opponent, board customization and a player progression system, wrapped in a calm, editorial tournament-table interface.",
+    tech: ["React 19", "TypeScript", "Vite", "Chess Engine (Pure TS)", "Responsive Design", "Accessibility"],
+    image: "/manus-storage/gameplay_initial_b85a3c21.webp",
+    gallery: [
+      "/manus-storage/gameplay_initial_b85a3c21.webp",
+      "/manus-storage/gameplay_e4_0ddad981.webp",
+      "/manus-storage/gameplay_middlegame_8bc5b73b.webp",
+      "/manus-storage/board_modern_31dd4d2a.webp",
+      "/manus-storage/board_midnight_theme_5e13a1b2.webp",
+      "/manus-storage/piece_style_gallery_b5045939.webp",
+      "/manus-storage/player_desk_cb775a03.webp",
+    ],
+    liveUrl: "https://simplechess-c5zahat9.manus.space",
+    sourceUrl: "https://github.com/damifdev/chess-game-portfolio",
+    highlight: "Chess engine · AI opponent · progression system · editorial UI",
+    caseStudy: {
+      overview:
+        "Tournament Ledger is a browser chess game designed as a quiet tournament table — an editorial chessboard with a live scorecard, engine evaluation and tactical report, plus a player desk with XP, quests, Chess DNA and game stories. Built with a pure TypeScript chess engine and a fully responsive interface.",
+      problem:
+        "Most browser chess interfaces feel like chess software — dense menus, jargon-heavy controls and a cold, utilitarian tone that never lets the player feel like they are sitting down at a real board.",
+      roleDesc:
+        "Designer & Developer — responsible for the game concept, UX strategy, interface design and front-end implementation of the full chess experience.",
+      process: [
+        "Framed the product as a tournament ledger: every match a named entry, every move written into a readable record.",
+        "Built the chess engine in pure TypeScript — legal move generation, check and checkmate detection, promotion and castling.",
+        "Designed analysis as coaching: plain-language hints, a tactical report and an engine evaluation bar beside the board.",
+        "Layered player progression — XP, daily and weekly quests, Chess DNA, game stories and achievements — onto recorded games.",
+        "Designed customization: two piece sets and eight board themes with instant live preview.",
+      ],
+      design:
+        "An ink-and-paper editorial language — serif display type, ruled hairlines, a calm dark surface — that treats the chessboard like a tournament table: instruments frame the game, never compete with it.",
+      outcome:
+        "A playable, accessible browser chess game with real depth — an adjustable AI, PGN import/export, a daily puzzle, match library and a progression system — shipped to a live URL.",
+      reflection:
+        "Depth and calm can coexist: a complete chess engine wrapped in a quiet editorial interface is more inviting than a stripped-down one — the design earns the depth by making every feature readable.",
+    },
+  },
+{
+    slug: "jigsaw-puzzle-game",
+    title: "Jigsaw Game Development",
+    readingTime: 4,
+    category: "Game Design · UI/UX · Interaction Design",
+    year: "Frontend Development",
+    role: "Designer & Developer",
+    description:
+      "A modern, immersive jigsaw puzzle experience designed around intuitive interactions, visual clarity, progression, and seamless gameplay — designed and built as a fully playable web app.",
+    tech: ["React 19", "TypeScript", "Tailwind CSS", "Web Audio", "Drag & Drop", "Responsive Design"],
+    image: "/manus-storage/jigsaw-gameplay_initial_207b45ce.webp",
+    gallery: [
+      "/manus-storage/jigsaw-puzzle_chooser_2161043e.webp",
+      "/manus-storage/jigsaw-gameplay_initial_207b45ce.webp",
+      "/manus-storage/jigsaw-gameplay_progress_3cd51132.webp",
+      "/manus-storage/jigsaw-gameplay_complete_8e332a14.webp",
+      "/manus-storage/jigsaw-settings_modal_c75eb1b2.webp",
+    ],
+    highlight: "Interactive game design · drag-and-drop craft · accessible interaction",
+    liveUrl: "https://jigsawgame-jqutmfne.manus.space",
+    sourceUrl: "https://github.com/damifdev/jigsaw-puzzle-game",
+    caseStudyPath: "/project/jigsaw",
+    caseStudy: {
+      overview:
+        "A fully playable digital puzzle table that recreates the quiet satisfaction of assembling a physical jigsaw — with four built-in artworks, four difficulty levels, custom image uploads, undo/redo history and a warm editorial interface.",
+      problem:
+        "Digital jigsaw interfaces often let pieces, controls, timers, progress indicators and settings compete for attention. The challenge was to keep the puzzle itself visually dominant while giving the player clear feedback and effortless control.",
+      roleDesc:
+        "Designer & Developer — responsible for the interaction design, visual system, game logic and full frontend implementation as a client-side web application.",
+      process: [
+        "Studied the tactile language of physical jigsaw puzzles — sorting, rotating, snapping, grouping.",
+        "Defined interaction principles: puzzle-first interface, minimal distractions, strong visual feedback.",
+        "Built the piece engine: drag-and-drop placement, snap-to-place feedback, rotation, undo/redo history.",
+        "Layered progression and challenge: difficulties, optional timer, hints and a polished completion state.",
+        "Refined the responsive experience for desktop, tablet and touch input, with reduced-motion and screen-reader support.",
+      ],
+      design:
+        "A 'Hearth & Paper' editorial workspace: warm cream board, ink typography, saffron accents, ruled hairlines. The board stays the hero while the tray, toolbar and progress read as quiet supporting instruments.",
+      outcome:
+        "A familiar physical puzzle activity, transformed into a clean, interactive digital experience where intuitive interaction, visual feedback and seamless gameplay lead the way.",
+      reflection:
+        "Game UI taught me that feedback is the product — a snap tone, a highlight, a satisfying settle. Small states, executed consistently, are what make an interaction feel real.",
+    },
+  },
+{
     slug: "asset-management",
     title: "Asset Management",
     readingTime: 2,
@@ -250,50 +381,6 @@ export const PROJECTS: Project[
     },
   },
 {
-    slug: "jigsaw-puzzle-game",
-    title: "Jigsaw Game Development",
-    readingTime: 4,
-    category: "Game Design · UI/UX · Interaction Design",
-    year: "Frontend Development",
-    role: "Designer & Developer",
-    description:
-      "A modern, immersive jigsaw puzzle experience designed around intuitive interactions, visual clarity, progression, and seamless gameplay — designed and built as a fully playable web app.",
-    tech: ["React 19", "TypeScript", "Tailwind CSS", "Web Audio", "Drag & Drop", "Responsive Design"],
-    image: "/manus-storage/jigsaw-gameplay_initial_207b45ce.webp",
-    gallery: [
-      "/manus-storage/jigsaw-puzzle_chooser_2161043e.webp",
-      "/manus-storage/jigsaw-gameplay_initial_207b45ce.webp",
-      "/manus-storage/jigsaw-gameplay_progress_3cd51132.webp",
-      "/manus-storage/jigsaw-gameplay_complete_8e332a14.webp",
-      "/manus-storage/jigsaw-settings_modal_c75eb1b2.webp",
-    ],
-    highlight: "Interactive game design · drag-and-drop craft · accessible interaction",
-    liveUrl: "https://jigsawgame-jqutmfne.manus.space",
-    sourceUrl: "https://github.com/damifdev/jigsaw-puzzle-game",
-    caseStudyPath: "/project/jigsaw",
-    caseStudy: {
-      overview:
-        "A fully playable digital puzzle table that recreates the quiet satisfaction of assembling a physical jigsaw — with four built-in artworks, four difficulty levels, custom image uploads, undo/redo history and a warm editorial interface.",
-      problem:
-        "Digital jigsaw interfaces often let pieces, controls, timers, progress indicators and settings compete for attention. The challenge was to keep the puzzle itself visually dominant while giving the player clear feedback and effortless control.",
-      roleDesc:
-        "Designer & Developer — responsible for the interaction design, visual system, game logic and full frontend implementation as a client-side web application.",
-      process: [
-        "Studied the tactile language of physical jigsaw puzzles — sorting, rotating, snapping, grouping.",
-        "Defined interaction principles: puzzle-first interface, minimal distractions, strong visual feedback.",
-        "Built the piece engine: drag-and-drop placement, snap-to-place feedback, rotation, undo/redo history.",
-        "Layered progression and challenge: difficulties, optional timer, hints and a polished completion state.",
-        "Refined the responsive experience for desktop, tablet and touch input, with reduced-motion and screen-reader support.",
-      ],
-      design:
-        "A 'Hearth & Paper' editorial workspace: warm cream board, ink typography, saffron accents, ruled hairlines. The board stays the hero while the tray, toolbar and progress read as quiet supporting instruments.",
-      outcome:
-        "A familiar physical puzzle activity, transformed into a clean, interactive digital experience where intuitive interaction, visual feedback and seamless gameplay lead the way.",
-      reflection:
-        "Game UI taught me that feedback is the product — a snap tone, a highlight, a satisfying settle. Small states, executed consistently, are what make an interaction feel real.",
-    },
-  },
-{
     slug: "bancassurance-mobile-app",
     title: "BancAssurance Mobile App",
     readingTime: 2,
@@ -363,94 +450,7 @@ export const PROJECTS: Project[
       reflection:
         "Real-world builds teach you that design decisions, development and hosting all belong to the same project — mastery is connecting them well.",
     },
-  },
-{
-    slug: "chess-game",
-    title: "Tournament Ledger",
-    readingTime: 6,
-    caseStudyPath: "/project/chess-game",
-    category: "Game Design / Development",
-    year: "2026",
-    role: "Designer & Developer",
-    description:
-      "A fully playable browser chess game — a complete TypeScript chess engine, an explorable AI opponent, board customization and a player progression system, wrapped in a calm, editorial tournament-table interface.",
-    tech: ["React 19", "TypeScript", "Vite", "Chess Engine (Pure TS)", "Responsive Design", "Accessibility"],
-    image: "/manus-storage/gameplay_initial_b85a3c21.webp",
-    gallery: [
-      "/manus-storage/gameplay_initial_b85a3c21.webp",
-      "/manus-storage/gameplay_e4_0ddad981.webp",
-      "/manus-storage/gameplay_middlegame_8bc5b73b.webp",
-      "/manus-storage/board_modern_31dd4d2a.webp",
-      "/manus-storage/board_midnight_theme_5e13a1b2.webp",
-      "/manus-storage/piece_style_gallery_b5045939.webp",
-      "/manus-storage/player_desk_cb775a03.webp",
-    ],
-    liveUrl: "https://simplechess-c5zahat9.manus.space",
-    sourceUrl: "https://github.com/damifdev/chess-game-portfolio",
-    highlight: "Chess engine · AI opponent · progression system · editorial UI",
-    caseStudy: {
-      overview:
-        "Tournament Ledger is a browser chess game designed as a quiet tournament table — an editorial chessboard with a live scorecard, engine evaluation and tactical report, plus a player desk with XP, quests, Chess DNA and game stories. Built with a pure TypeScript chess engine and a fully responsive interface.",
-      problem:
-        "Most browser chess interfaces feel like chess software — dense menus, jargon-heavy controls and a cold, utilitarian tone that never lets the player feel like they are sitting down at a real board.",
-      roleDesc:
-        "Designer & Developer — responsible for the game concept, UX strategy, interface design and front-end implementation of the full chess experience.",
-      process: [
-        "Framed the product as a tournament ledger: every match a named entry, every move written into a readable record.",
-        "Built the chess engine in pure TypeScript — legal move generation, check and checkmate detection, promotion and castling.",
-        "Designed analysis as coaching: plain-language hints, a tactical report and an engine evaluation bar beside the board.",
-        "Layered player progression — XP, daily and weekly quests, Chess DNA, game stories and achievements — onto recorded games.",
-        "Designed customization: two piece sets and eight board themes with instant live preview.",
-      ],
-      design:
-        "An ink-and-paper editorial language — serif display type, ruled hairlines, a calm dark surface — that treats the chessboard like a tournament table: instruments frame the game, never compete with it.",
-      outcome:
-        "A playable, accessible browser chess game with real depth — an adjustable AI, PGN import/export, a daily puzzle, match library and a progression system — shipped to a live URL.",
-      reflection:
-        "Depth and calm can coexist: a complete chess engine wrapped in a quiet editorial interface is more inviting than a stripped-down one — the design earns the depth by making every feature readable.",
-    },
-  },
-  {
-    slug: "averae-ecommerce",
-    title: "Áveraẹ",
-    readingTime: 4,
-    caseStudyPath: "/project/averae-ecommerce",
-    category: "Web Design & Development / UI/UX / E-commerce",
-    year: "2026",
-    role: "UI/UX Designer & Developer",
-    description:
-      "An editorial-inspired fashion marketplace combining e-commerce, trend discovery and a seamless shopping experience.",
-    tech: ["UI/UX Design", "E-commerce UX", "Responsive Web Design", "Information Architecture", "Design Systems", "Frontend Development", "Interaction Design", "Product Discovery"],
-    image: "/manus-storage/averae-home-desktop_c3e9b056.webp",
-    gallery: [
-      "/manus-storage/averae-home-desktop_c3e9b056.webp",
-      "/manus-storage/averae-shop-desktop_63342222.webp",
-      "/manus-storage/averae-product-desktop_fd128306.webp",
-    ],
-    highlight: "UI/UX design · e-commerce UX · responsive web design · information architecture · design systems · frontend development · interaction design · product discovery",
-    liveUrl: "https://averaeshop-qciqqxdk.manus.space",
-    caseStudy: {
-      overview:
-        "Áveraẹ is a deployed fashion and lifestyle e-commerce marketplace built around the idea that shopping can feel like entering a considered editorial world. The experience brings clothing, shoes, bags, jewelry, hair, accessories, watches, beauty and lifestyle, and thrift wear into one responsive storefront, with discovery-led content sitting alongside practical shopping tools.",
-      problem:
-        "Fashion marketplaces can become crowded catalogs where discovery, product information and purchase actions compete for attention. Áveraẹ needed to make a broad multi-category assortment feel curated while still giving shoppers the tools they expect: search, filters, sorting, product detail pages, wishlists, a shopping bag and a clear route to checkout.",
-      roleDesc:
-        "UI/UX Designer & Developer — responsible for the visual and interaction direction of the storefront, the discovery and shopping experience, and the deployed frontend implementation. The live site exposes a React bundle and an Express-powered response header; no additional framework is claimed beyond what is detectable from the deployment.",
-      process: [
-        "Structured the marketplace around two complementary paths: shop by audience (Women, Men, Kids and Unisex) and shop by product category.",
-        "Connected editorial discovery to commerce through Trending now, New arrivals, The Áveraẹ Edit, Cultural Spotlight, Style Guide, Shop the Look and Editor's Picks modules.",
-        "Designed the shop experience around 18 visible products with audience/category filters, product search, filter controls, sorting and product-card actions such as wishlist, Quick View, Select Options and Quick Add.",
-        "Made product detail pages carry the decision-making load with image galleries, zoom, color and size selection, size guidance, market-specific sizing, delivery information, returns and product details.",
-        "Extended the experience to responsive shopping journeys and utility destinations including account, orders, wishlist, bag, delivery, returns, size guide, FAQs and contact support.",
-      ],
-      design:
-        "The live storefront uses a warm editorial fashion language: ivory surfaces, dark brown typography, large serif headlines, hairline dividers, restrained utility icons and warm architectural photography. Its African-inspired identity comes through as a point of view rather than a decorative layer — rooted references, modern proportions and a marketplace structure that stays practical.",
-      outcome:
-        "A live, responsive fashion marketplace that joins editorial storytelling with observable shopping functionality: category and audience discovery, trend-led merchandising, product search, filtering, sorting, wishlists, bag actions, product detail and size guidance, plus delivery, returns and support information.",
-      reflection:
-        "Áveraẹ demonstrates how a marketplace can hold breadth without feeling anonymous. The strongest experience comes from treating discovery and utility as one system: editorial modules create direction, while filters, product details and purchase actions help the shopper act on it.",
-    },
-  },
+  }
 ];
 
 /* ------------------------------------------------------------------ */
