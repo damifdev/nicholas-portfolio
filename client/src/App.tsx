@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import ChessCaseStudy from "./pages/ChessCaseStudy";
 import JigsawCaseStudy from "./pages/JigsawCaseStudy";
+import AveraeCaseStudy from "./pages/AveraeCaseStudy";
 import ProjectCaseStudy from "./pages/ProjectCaseStudy";
 
 
@@ -16,6 +17,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/project/jigsaw"} component={JigsawCaseStudy} />
       <Route path={"/project/chess-game"} component={ChessCaseStudy} />
+      <Route path={"/project/averae-ecommerce"} component={AveraeCaseStudy} />
       <Route path={"/project/:slug"} component={ProjectCaseStudy} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
