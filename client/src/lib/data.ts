@@ -410,6 +410,47 @@ export const PROJECTS: Project[
         "Depth and calm can coexist: a complete chess engine wrapped in a quiet editorial interface is more inviting than a stripped-down one — the design earns the depth by making every feature readable.",
     },
   },
+  {
+    slug: "averae-ecommerce",
+    title: "Áveraẹ",
+    readingTime: 4,
+    caseStudyPath: "/project/averae-ecommerce",
+    category: "Web Design & Development / UI/UX / E-commerce",
+    year: "2026",
+    role: "UI/UX Designer & Developer",
+    description:
+      "A premium fashion and lifestyle marketplace that brings editorial discovery, African-inspired identity and practical e-commerce flows into one seamless shopping experience.",
+    tech: ["React", "Express", "Responsive Design", "E-commerce UX"],
+    image: "/manus-storage/averae-home-desktop_c3e9b056.webp",
+    gallery: [
+      "/manus-storage/averae-home-desktop_c3e9b056.webp",
+      "/manus-storage/averae-shop-desktop_63342222.webp",
+      "/manus-storage/averae-product-desktop_fd128306.webp",
+    ],
+    highlight: "Editorial fashion commerce · discovery · marketplace flows",
+    liveUrl: "https://averaeshop-qciqqxdk.manus.space",
+    caseStudy: {
+      overview:
+        "Áveraẹ is a deployed fashion and lifestyle e-commerce marketplace built around the idea that shopping can feel like entering a considered editorial world. The experience brings clothing, shoes, bags, jewelry, hair, accessories, watches, beauty and lifestyle, and thrift wear into one responsive storefront, with discovery-led content sitting alongside practical shopping tools.",
+      problem:
+        "Fashion marketplaces can become crowded catalogs where discovery, product information and purchase actions compete for attention. Áveraẹ needed to make a broad multi-category assortment feel curated while still giving shoppers the tools they expect: search, filters, sorting, product detail pages, wishlists, a shopping bag and a clear route to checkout.",
+      roleDesc:
+        "UI/UX Designer & Developer — responsible for the visual and interaction direction of the storefront, the discovery and shopping experience, and the deployed frontend implementation. The live site exposes a React bundle and an Express-powered response header; no additional framework is claimed beyond what is detectable from the deployment.",
+      process: [
+        "Structured the marketplace around two complementary paths: shop by audience (Women, Men, Kids and Unisex) and shop by product category.",
+        "Connected editorial discovery to commerce through Trending now, New arrivals, The Áveraẹ Edit, Cultural Spotlight, Style Guide, Shop the Look and Editor's Picks modules.",
+        "Designed the shop experience around 18 visible products with audience/category filters, product search, filter controls, sorting and product-card actions such as wishlist, Quick View, Select Options and Quick Add.",
+        "Made product detail pages carry the decision-making load with image galleries, zoom, color and size selection, size guidance, market-specific sizing, delivery information, returns and product details.",
+        "Extended the experience to responsive shopping journeys and utility destinations including account, orders, wishlist, bag, delivery, returns, size guide, FAQs and contact support.",
+      ],
+      design:
+        "The live storefront uses a warm editorial fashion language: ivory surfaces, dark brown typography, large serif headlines, hairline dividers, restrained utility icons and warm architectural photography. Its African-inspired identity comes through as a point of view rather than a decorative layer — rooted references, modern proportions and a marketplace structure that stays practical.",
+      outcome:
+        "A live, responsive fashion marketplace that joins editorial storytelling with observable shopping functionality: category and audience discovery, trend-led merchandising, product search, filtering, sorting, wishlists, bag actions, product detail and size guidance, plus delivery, returns and support information.",
+      reflection:
+        "Áveraẹ demonstrates how a marketplace can hold breadth without feeling anonymous. The strongest experience comes from treating discovery and utility as one system: editorial modules create direction, while filters, product details and purchase actions help the shopper act on it.",
+    },
+  },
 ];
 
 /* ------------------------------------------------------------------ */
