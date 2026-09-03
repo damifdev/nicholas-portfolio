@@ -26,6 +26,7 @@ export const NAV_LINKS = [
   { id: "about", label: "About", href: "#about" },
   { id: "skills", label: "Skills", href: "#skills" },
   { id: "journey", label: "Journey", href: "#journey" },
+  { id: "certificates", label: "Certificates", href: "#certificates" },
   { id: "contact", label: "Contact", href: "#contact" },
 ];
 
@@ -831,6 +832,34 @@ export const CERTIFICATIONS = {
     { name: "Frontend Development", status: "learning" as const },
   ],
 };
+
+/* ------------------------------------------------------------------ */
+/* Certificates — verified file-backed archive                         */
+/* ------------------------------------------------------------------ */
+export type CertificateStatus = "COMPLETED" | "IN PROGRESS";
+
+export interface Certificate {
+  id: string;
+  title: string;
+  issuer: string;
+  date?: string;
+  credentialId?: string;
+  category: "DESIGN" | "DEVELOPMENT" | "AI" | "CYBERSECURITY" | "OTHER";
+  status: CertificateStatus;
+  description?: string;
+  skills?: string[];
+  verificationUrl?: string;
+  file?: string;
+  previewImage?: string;
+}
+
+/*
+ * Keep this archive empty until the original certificate image/PDF is
+ * uploaded. The learning list above is intentionally separate: it is not
+ * evidence that a certificate file or completion credential is available.
+ * Add a verified file-backed record here when one is provided.
+ */
+export const CERTIFICATE_ARCHIVE: Certificate[] = [];
 
 /* ------------------------------------------------------------------ */
 /* Journey — interactive animated timeline                             */

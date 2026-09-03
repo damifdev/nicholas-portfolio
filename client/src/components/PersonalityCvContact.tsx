@@ -11,6 +11,9 @@ import { SectionHeading } from "./SelectedWork";
 import { ASSETS, PERSONAL_THEMES, SOCIALS } from "@/lib/data";
 
 const CV_PDF = "/manus-storage/cv-updated_84840555.pdf";
+const CONVERSATION_SUBJECT = "Let's work together";
+const CONVERSATION_BODY = `Hello Nicholas,\n\nI came across your portfolio and would like to start a conversation about a potential opportunity/project.\n\nHere are a few details:\n\nName:\nCompany/Organization:\nProject or Opportunity:\nTimeline:\nBudget (optional):\n\nLooking forward to hearing from you.\n\nBest,\n[Visitor Name]`;
+const CONVERSATION_MAILTO = `mailto:${SOCIALS.email}?subject=${encodeURIComponent(CONVERSATION_SUBJECT)}&body=${encodeURIComponent(CONVERSATION_BODY)}`;
 
 export function BeyondScreenSection() {
   return (
@@ -183,18 +186,25 @@ export function ContactSection() {
         <p
           className="reveal mt-7 max-w-xl text-base text-muted-foreground md:text-lg"
           style={{ ["--reveal-delay" as string]: "240ms" }}>
-          Whether you're looking for a designer, developer, collaborator, or
-          someone who can bridge the gap between design and technology, let's
-          talk.
+          Have an idea, opportunity, or interesting problem? Let's talk.
         </p>
 
         <div className="reveal mt-10" style={{ ["--reveal-delay" as string]: "360ms" }}>
           <a
-            href={SOCIALS.emailHref}
+            href={CONVERSATION_MAILTO}
             data-cursor="magnet"
-            className="group inline-flex items-center gap-3 border border-[var(--ember)] px-8 py-5 text-lg font-semibold transition-colors duration-300 hover:bg-[var(--ember)] hover:text-primary-foreground md:text-xl">
+            className="group inline-flex min-h-14 items-center gap-3 border border-[var(--ember)] px-8 py-5 text-lg font-semibold transition-colors duration-300 hover:bg-[var(--ember)] hover:text-primary-foreground md:text-xl">
             Start a Conversation <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </a>
+          <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+            <span>Prefer webmail?</span>
+            <CopyButton
+              value={EMAIL_PARTS.join("")}
+              label="Copy email"
+              copiedLabel="COPIED ✓"
+              textLabel="COPY MY EMAIL"
+            />
+          </div>
         </div>
 
         <div
@@ -222,8 +232,9 @@ export function ContactSection() {
             </div>
             <CopyButton
               value={EMAIL_PARTS.join("")}
-              copiedLabel="Copied"
+              copiedLabel="COPIED ✓"
               label="Copy email"
+              textLabel="COPY EMAIL"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -255,26 +266,55 @@ function EmailDisplay() {
   return <>{EMAIL_PARTS.join("")}</>;
 }
 
-function CopyButton({ value, label, copiedLabel }: { value: string; label: string; copiedLabel: string }) {
+async function copyText(value: string) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(value);
+    return;
+  }
+
+  const fallback = document.createElement("textarea");
+  fallback.value = value;
+  fallback.setAttribute("readonly", "");
+  fallback.style.position = "fixed";
+  fallback.style.opacity = "0";
+  document.body.appendChild(fallback);
+  fallback.select();
+  const copied = document.execCommand("copy");
+  fallback.remove();
+  if (!copied) throw new Error("Clipboard unavailable");
+}
+
+function CopyButton({
+  value,
+  label,
+  copiedLabel,
+  textLabel,
+}: {
+  value: string;
+  label: string;
+  copiedLabel: string;
+  textLabel?: string;
+}) {
   const [copied, setCopied] = useState(false);
   return (
     <button
       type="button"
       aria-label={label}
       title={label}
-      onClick={() => {
-        navigator.clipboard.writeText(value).then(() => {
+      onClick={async () => {
+        try {
+          await copyText(value);
           setCopied(true);
           toast.success(`${copiedLabel} to clipboard`);
-          setTimeout(() => setCopied(false), 1800);
-        });
+          window.setTimeout(() => setCopied(false), 1800);
+        } catch {
+          toast.error("Copy failed — please select the email manually.");
+        }
       }}
-      className="flex h-8 w-8 items-center justify-center border border-border text-muted-foreground transition-all duration-200 hover:border-[var(--ember)] hover:text-[var(--ember)] active:scale-[0.94]">
-      {copied ? (
-        <Check className="h-3.5 w-3.5 text-[var(--ember)]" />
-      ) : (
-        <Copy className="h-3.5 w-3.5" />
-      )}
+      className={`inline-flex min-h-8 items-center justify-center gap-2 border border-border px-2.5 font-mono text-[10px] tracking-[0.12em] text-muted-foreground transition-all duration-200 hover:border-[var(--ember)] hover:text-[var(--ember)] active:scale-[0.94] ${textLabel ? "whitespace-nowrap" : "w-8 px-0"}`}
+    >
+      {copied ? <Check className="h-3.5 w-3.5 text-[var(--ember)]" /> : <Copy className="h-3.5 w-3.5" />}
+      {textLabel && (copied ? copiedLabel : textLabel)}
     </button>
   );
 }
@@ -294,11 +334,11 @@ export function Footer() {
           <a href={SOCIALS.github} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">GitHub</a>
           <div className="flex items-center gap-2">
             <a href={SOCIALS.emailHref} className="text-sm text-muted-foreground hover:text-[var(--ember)]">Email</a>
-            <CopyButton value={EMAIL_PARTS.join("")} label="Copy email" copiedLabel="Copied" />
+            <CopyButton value={EMAIL_PARTS.join("")} label="Copy email" copiedLabel="COPIED ✓" />
           </div>
           <div className="flex items-center gap-2">
             <a href={SOCIALS.phoneHref} className="text-sm text-muted-foreground hover:text-[var(--ember)]">+234 912 293 2268</a>
-            <CopyButton value="+2349122932268" label="Copy number" copiedLabel="Copied" />
+            <CopyButton value="+2349122932268" label="Copy number" copiedLabel="COPIED ✓" />
           </div>
           <a href={SOCIALS.behance} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-[var(--ember)]">Behance</a>
           <a href="#cv" onClick={(e) => { e.preventDefault(); document.getElementById("cv")?.scrollIntoView({ behavior: "smooth" }); }} className="text-sm text-muted-foreground hover:text-[var(--ember)]">CV</a>

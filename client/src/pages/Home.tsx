@@ -25,6 +25,7 @@ import {
   ContactSection,
   Footer,
 } from "@/components/PersonalityCvContact";
+import { CertificatesSection } from "@/components/Certificates";
 import { useReveal } from "@/hooks/useReveal";
 
 export default function Home() {
@@ -46,6 +47,7 @@ export default function Home() {
         <ExperienceSection />
         <JourneySection />
         <BecomingSection />
+        <CertificatesSection />
         <BeyondScreenSection />
         <CvSection />
         <ContactSection />
