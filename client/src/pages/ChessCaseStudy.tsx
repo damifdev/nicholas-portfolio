@@ -35,14 +35,14 @@ const LIVE_URL = "https://simplechess-c5zahat9.manus.space";
 const SOURCE_URL = "https://github.com/damifdev/chess-game-portfolio";
 
 const IMG = {
-  gameplay: "/manus-storage/gameplay_initial_b85a3c21.webp",
-  opening: "/manus-storage/gameplay_e4_0ddad981.webp",
-  middlegame: "/manus-storage/gameplay_middlegame_8bc5b73b.webp",
-  modernPieces: "/manus-storage/board_modern_31dd4d2a.webp",
-  midnightTheme: "/manus-storage/board_midnight_theme_5e13a1b2.webp",
-  pieceGallery: "/manus-storage/piece_style_gallery_b5045939.webp",
-  playerDesk: "/manus-storage/player_desk_cb775a03.webp",
-  quests: "/manus-storage/player_desk_quests_50ecfa80.webp",
+  gameplay: "/assets/gameplay_initial_b85a3c21.webp",
+  opening: "/assets/gameplay_e4_0ddad981.webp",
+  middlegame: "/assets/gameplay_middlegame_8bc5b73b.webp",
+  modernPieces: "/assets/board_modern_31dd4d2a.webp",
+  midnightTheme: "/assets/board_midnight_theme_5e13a1b2.webp",
+  pieceGallery: "/assets/piece_style_gallery_b5045939.webp",
+  playerDesk: "/assets/player_desk_cb775a03.webp",
+  quests: "/assets/player_desk_quests_50ecfa80.webp",
 };
 
 /* ------------------------------------------------------------------ */
@@ -161,7 +161,7 @@ export default function ChessCaseStudy() {
               style={{ ["--reveal-delay" as string]: "180ms" }}>
               {/* Live gameplay clip — animated hero media, muted & looping */}
               <video
-                src="/manus-storage/chess_hero_0002023c.mp4"
+                src="/assets/chess_hero_0002023c.mp4"
                 autoPlay
                 muted
                 loop

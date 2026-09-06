@@ -10,7 +10,7 @@ import { toast } from "sonner";
 import { SectionHeading } from "./SelectedWork";
 import { ASSETS, PERSONAL_THEMES, SOCIALS } from "@/lib/data";
 
-const CV_PDF = "/manus-storage/cv-updated_84840555.pdf";
+const CV_PDF = "/assets/cv-updated_84840555.pdf";
 const CONVERSATION_SUBJECT = "Let's work together";
 const CONVERSATION_BODY = `Hello Nicholas,\n\nI came across your portfolio and would like to start a conversation about a potential opportunity/project.\n\nHere are a few details:\n\nName:\nCompany/Organization:\nProject or Opportunity:\nTimeline:\nBudget (optional):\n\nLooking forward to hearing from you.\n\nBest,\n[Visitor Name]`;
 const CONVERSATION_MAILTO = `mailto:${SOCIALS.email}?subject=${encodeURIComponent(CONVERSATION_SUBJECT)}&body=${encodeURIComponent(CONVERSATION_BODY)}`;

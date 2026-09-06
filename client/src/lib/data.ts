@@ -6,18 +6,18 @@
  */
 
 export const ASSETS = {
-  monogram: "/manus-storage/osa-monogram_a2054be2.webp",
-  portrait: "/manus-storage/hero-portrait-dark_696c199f.webp",
-  portrait2: "/manus-storage/portrait-real-2_45f9f0c1.webp",
-  heroTexture: "/manus-storage/hero-texture_9b2bfce5.webp",
-  divider: "/manus-storage/section-divider_12b73b02.png",
-  beyondScreen: "/manus-storage/beyond-screen_d69848a5.png",
-  learningDirection: "/manus-storage/learning-direction_05f69280.webp",
-  aiCreativeBanner: "/manus-storage/ai-creative-banner_5a38019b.png",
-  aiExpLanding: "/manus-storage/ai-exp-landing_672885a2.png",
-  aiExpLogo: "/manus-storage/ai-exp-logo_b18a01b0.png",
-  aiExpFlyer: "/manus-storage/ai-exp-flyer_e1ec4f76.png",
-  aiExpUi: "/manus-storage/ai-exp-ui_cc1c8506.png",
+  monogram: "/assets/osa-monogram_a2054be2.webp",
+  portrait: "/assets/hero-portrait-dark_696c199f.webp",
+  portrait2: "/assets/portrait-real-2_45f9f0c1.webp",
+  heroTexture: "/assets/hero-texture_9b2bfce5.webp",
+  divider: "/assets/section-divider_12b73b02.png",
+  beyondScreen: "/assets/beyond-screen_d69848a5.png",
+  learningDirection: "/assets/learning-direction_05f69280.webp",
+  aiCreativeBanner: "/assets/ai-creative-banner_5a38019b.png",
+  aiExpLanding: "/assets/ai-exp-landing_672885a2.png",
+  aiExpLogo: "/assets/ai-exp-logo_b18a01b0.png",
+  aiExpFlyer: "/assets/ai-exp-flyer_e1ec4f76.png",
+  aiExpUi: "/assets/ai-exp-ui_cc1c8506.png",
 };
 
 export const NAV_LINKS = [
@@ -105,11 +105,11 @@ export const PROJECTS: Project[] = [
     description:
       "An editorial-inspired fashion marketplace combining e-commerce, trend discovery and a seamless shopping experience.",
     tech: ["UI/UX Design", "E-commerce UX", "Responsive Web Design", "Information Architecture", "Design Systems", "Frontend Development", "Interaction Design", "Product Discovery"],
-    image: "/manus-storage/averae-home-desktop_c3e9b056.webp",
+    image: "/assets/averae-home-desktop_c3e9b056.webp",
     gallery: [
-      "/manus-storage/averae-home-desktop_c3e9b056.webp",
-      "/manus-storage/averae-shop-desktop_63342222.webp",
-      "/manus-storage/averae-product-desktop_fd128306.webp",
+      "/assets/averae-home-desktop_c3e9b056.webp",
+      "/assets/averae-shop-desktop_63342222.webp",
+      "/assets/averae-product-desktop_fd128306.webp",
     ],
     highlight: "UI/UX design · e-commerce UX · responsive web design · information architecture · design systems · frontend development · interaction design · product discovery",
     liveUrl: "https://averaeshop-qciqqxdk.manus.space",
@@ -146,15 +146,15 @@ export const PROJECTS: Project[] = [
     description:
       "A fully playable browser chess game — a complete TypeScript chess engine, an explorable AI opponent, board customization and a player progression system, wrapped in a calm, editorial tournament-table interface.",
     tech: ["React 19", "TypeScript", "Vite", "Chess Engine (Pure TS)", "Responsive Design", "Accessibility"],
-    image: "/manus-storage/gameplay_initial_b85a3c21.webp",
+    image: "/assets/gameplay_initial_b85a3c21.webp",
     gallery: [
-      "/manus-storage/gameplay_initial_b85a3c21.webp",
-      "/manus-storage/gameplay_e4_0ddad981.webp",
-      "/manus-storage/gameplay_middlegame_8bc5b73b.webp",
-      "/manus-storage/board_modern_31dd4d2a.webp",
-      "/manus-storage/board_midnight_theme_5e13a1b2.webp",
-      "/manus-storage/piece_style_gallery_b5045939.webp",
-      "/manus-storage/player_desk_cb775a03.webp",
+      "/assets/gameplay_initial_b85a3c21.webp",
+      "/assets/gameplay_e4_0ddad981.webp",
+      "/assets/gameplay_middlegame_8bc5b73b.webp",
+      "/assets/board_modern_31dd4d2a.webp",
+      "/assets/board_midnight_theme_5e13a1b2.webp",
+      "/assets/piece_style_gallery_b5045939.webp",
+      "/assets/player_desk_cb775a03.webp",
     ],
     liveUrl: "https://simplechess-c5zahat9.manus.space",
     sourceUrl: "https://github.com/damifdev/chess-game-portfolio",
@@ -191,13 +191,13 @@ export const PROJECTS: Project[] = [
     description:
       "A modern, immersive jigsaw puzzle experience designed around intuitive interactions, visual clarity, progression, and seamless gameplay — designed and built as a fully playable web app.",
     tech: ["React 19", "TypeScript", "Tailwind CSS", "Web Audio", "Drag & Drop", "Responsive Design"],
-    image: "/manus-storage/jigsaw-gameplay_initial_207b45ce.webp",
+    image: "/assets/jigsaw-gameplay_initial_207b45ce.webp",
     gallery: [
-      "/manus-storage/jigsaw-puzzle_chooser_2161043e.webp",
-      "/manus-storage/jigsaw-gameplay_initial_207b45ce.webp",
-      "/manus-storage/jigsaw-gameplay_progress_3cd51132.webp",
-      "/manus-storage/jigsaw-gameplay_complete_8e332a14.webp",
-      "/manus-storage/jigsaw-settings_modal_c75eb1b2.webp",
+      "/assets/jigsaw-puzzle_chooser_2161043e.webp",
+      "/assets/jigsaw-gameplay_initial_207b45ce.webp",
+      "/assets/jigsaw-gameplay_progress_3cd51132.webp",
+      "/assets/jigsaw-gameplay_complete_8e332a14.webp",
+      "/assets/jigsaw-settings_modal_c75eb1b2.webp",
     ],
     highlight: "Interactive game design · drag-and-drop craft · accessible interaction",
     liveUrl: "https://jigsawgame-jqutmfne.manus.space",
@@ -236,11 +236,11 @@ export const PROJECTS: Project[] = [
     description:
       "A digital product experience designed to simplify asset management workflows through a structured, intuitive and data-focused interface.",
     tech: ["Figma", "Product Design", "Dashboard Design", "Information Architecture", "Data-Heavy Interfaces"],
-    image: "/manus-storage/asset-dashboard_7287d154.webp",
+    image: "/assets/asset-dashboard_7287d154.webp",
     gallery: [
-      "/manus-storage/asset-dashboard_7287d154.webp",
-      "/manus-storage/asset-list_0ba0ba37.webp",
-      "/manus-storage/asset-login_1da0ea41.webp",
+      "/assets/asset-dashboard_7287d154.webp",
+      "/assets/asset-list_0ba0ba37.webp",
+      "/assets/asset-login_1da0ea41.webp",
     ],
     highlight: "Data-heavy dashboards · asset workflows · business interfaces",
     caseStudy: {
@@ -276,8 +276,8 @@ export const PROJECTS: Project[] = [
     description:
       "Designing the digital journey that takes a visitor from first glance to a completed insurance purchase — clarity, trust and a responsive experience at every step.",
     tech: ["Figma", "UX Research", "Responsive Design", "Prototyping"],
-    image: "/manus-storage/gi-website-full_51ff9683.webp",
-    gallery: ["/manus-storage/gi-website-full_51ff9683.webp"],
+    image: "/assets/gi-website-full_51ff9683.webp",
+    gallery: ["/assets/gi-website-full_51ff9683.webp"],
     highlight: "Insurance purchase journey · product thinking · responsive experience",
     caseStudy: {
       overview:
@@ -313,10 +313,10 @@ export const PROJECTS: Project[] = [
     description:
       "A structured agent management interface designed to make operational information and workflows easier to navigate.",
     tech: ["Figma", "Canva", "UI Design", "Information Hierarchy"],
-    image: "/manus-storage/agent-welcome_c3622be8.webp",
+    image: "/assets/agent-welcome_c3622be8.webp",
     gallery: [
-      "/manus-storage/agent-welcome_c3622be8.webp",
-      "/manus-storage/agent-profile_84484459.webp",
+      "/assets/agent-welcome_c3622be8.webp",
+      "/assets/agent-profile_84484459.webp",
     ],
     highlight: "Business & operational UI · structure · workflow",
     caseStudy: {
@@ -353,11 +353,11 @@ export const PROJECTS: Project[] = [
     description:
       "A mobile point-of-sale interface exploring a clean and intuitive experience for transactional workflows.",
     tech: ["Figma", "Mobile UI", "Interaction Design"],
-    image: "/manus-storage/mpos-payment_e49f4328.webp",
+    image: "/assets/mpos-payment_e49f4328.webp",
     gallery: [
-      "/manus-storage/mpos-payment_e49f4328.webp",
-      "/manus-storage/mpos-connect_9ace4053.webp",
-      "/manus-storage/mpos-scan_877049a5.webp",
+      "/assets/mpos-payment_e49f4328.webp",
+      "/assets/mpos-connect_9ace4053.webp",
+      "/assets/mpos-scan_877049a5.webp",
     ],
     highlight: "Mobile-first · transactional flow · touch-friendly clarity",
     caseStudy: {
@@ -392,9 +392,9 @@ export const PROJECTS: Project[] = [
     description:
       "A mobile experience for bank agents and customers, shaped around real workflows, information architecture and flows that feel effortless in the hand.",
     tech: ["Figma", "User Flows", "Information Architecture", "Mobile UX"],
-    image: "/manus-storage/bancassurance-agent-dashboard_2814b4d6.webp",
+    image: "/assets/bancassurance-agent-dashboard_2814b4d6.webp",
     gallery: [
-      "/manus-storage/bancassurance-agent-dashboard_2814b4d6.webp",
+      "/assets/bancassurance-agent-dashboard_2814b4d6.webp",
     ],
     highlight: "Mobile UX · agent workflows · user flows",
     caseStudy: {
@@ -429,7 +429,7 @@ export const PROJECTS: Project[] = [
     description:
       "A full website redesign and rebuild — from an outdated web presence to a modern, responsive site built with WordPress, Elementor and custom front-end craft.",
     tech: ["WordPress", "Elementor", "Astra", "HappyAddons", "HTML", "CSS", "JavaScript"],
-    image: "/manus-storage/project-cgsul_d614551d.webp",
+    image: "/assets/project-cgsul_d614551d.webp",
     highlight: "Before/after redesign · responsive layouts · migration & hosting",
     caseStudy: {
       overview:

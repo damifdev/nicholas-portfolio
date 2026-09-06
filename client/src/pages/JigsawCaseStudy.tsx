@@ -29,11 +29,11 @@ const LIVE_URL = "https://jigsawgame-jqutmfne.manus.space";
 const SOURCE_URL = "https://github.com/damifdev/jigsaw-puzzle-game";
 
 const IMG = {
-  chooser: "/manus-storage/jigsaw-puzzle_chooser_2161043e.webp",
-  board: "/manus-storage/jigsaw-gameplay_initial_207b45ce.webp",
-  progress: "/manus-storage/jigsaw-gameplay_progress_3cd51132.webp",
-  complete: "/manus-storage/jigsaw-gameplay_complete_8e332a14.webp",
-  settings: "/manus-storage/jigsaw-settings_modal_c75eb1b2.webp",
+  chooser: "/assets/jigsaw-puzzle_chooser_2161043e.webp",
+  board: "/assets/jigsaw-gameplay_initial_207b45ce.webp",
+  progress: "/assets/jigsaw-gameplay_progress_3cd51132.webp",
+  complete: "/assets/jigsaw-gameplay_complete_8e332a14.webp",
+  settings: "/assets/jigsaw-settings_modal_c75eb1b2.webp",
 };
 
 /* ------------------------------------------------------------------ */
